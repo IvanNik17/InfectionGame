@@ -226,6 +226,8 @@ GameObject:
   - component: {fileID: 658392342}
   - component: {fileID: 658392341}
   - component: {fileID: 658392340}
+  - component: {fileID: 658392345}
+  - component: {fileID: 658392344}
   m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
@@ -307,6 +309,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &658392344
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658392339}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &658392345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658392339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd4b1d8550cfed4bb3e1e9a68fa9ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleConditions:
+  - {fileID: 2100000, guid: 77998bca3b3ea7d4884a94cd06793316, type: 2}
+  - {fileID: 2100000, guid: 3e0aa82231340b747810f3482a4d93b5, type: 2}
+  - {fileID: 2100000, guid: ebd1b12da75fe634aa635821fa589011, type: 2}
 --- !u!1 &685961103
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,9 +528,10 @@ GameObject:
   - component: {fileID: 1338208761}
   - component: {fileID: 1338208760}
   - component: {fileID: 1338208759}
-  m_Layer: 9
+  - component: {fileID: 1338208763}
+  m_Layer: 0
   m_Name: person
-  m_TagString: Untagged
+  m_TagString: kids
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,6 +610,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1338208763
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338208758}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1 &1488373486
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +672,11 @@ MonoBehaviour:
   raycasterObj: {fileID: 153715334}
   colliderSpace: {fileID: 658392339}
   personPrefab: {fileID: 1338208758}
-  allPeople: []
+  allSickPeople: []
   radBetweenPeople: 1
+  possibleConditions:
+  - {fileID: 2100000, guid: 77998bca3b3ea7d4884a94cd06793316, type: 2}
+  - {fileID: 2100000, guid: 3e0aa82231340b747810f3482a4d93b5, type: 2}
+  - {fileID: 2100000, guid: ebd1b12da75fe634aa635821fa589011, type: 2}
   spawnTime: 2
   numEmpty: 20
