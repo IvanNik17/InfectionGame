@@ -118,10 +118,11 @@ public class spawnKids : MonoBehaviour
 
         foreach (GameObject spawner in allSpawners)
         {
-            if (spawner.GetComponent<spawner>().isOpen)
-            {
-                openSpawners.Add(spawner);
-            }
+            //This part is so we lower the amount of infected when we close school. (I)
+            // if (spawner.GetComponent<spawner>().isOpen)
+            //{
+            openSpawners.Add(spawner);
+            //}
         }
 
         if (openSpawners.Count == 0)
@@ -130,6 +131,13 @@ public class spawnKids : MonoBehaviour
         }
 
         whichSpawnerSlide = Random.Range(0, openSpawners.Count);
+
+
+        //This part is so we lower the amount of infected when we close school. (II)
+        if (!openSpawners[whichSpawnerSlide].GetComponent<spawner>().isOpen)
+        {
+            return;
+        }
 
         List<GameObject> currSpawnerKids = openSpawners[whichSpawnerSlide].GetComponent<spawner>().kidsInThisClass;
         //List<int> currPlacesOfKids = allSpawners[whichSpawnerSlide].GetComponent<spawner>().placeOfKids;
