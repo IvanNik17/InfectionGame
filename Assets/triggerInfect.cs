@@ -5,11 +5,13 @@ using UnityEngine;
 public class triggerInfect : MonoBehaviour
 {
 
-    float radiusInfection = 2f;
+    // public float radiusInfection = 2f;
 
     int layerMaskPeople = 1 << 9;
 
     public Material[] possibleConditions;
+
+    public GameObject managerObj;
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +29,26 @@ public class triggerInfect : MonoBehaviour
     {
         if (collision.transform.tag == "kids")
         {
-            collision.transform.GetComponent<Rigidbody>().isKinematic = true;
 
-            Collider[] hitColliders = Physics.OverlapSphere(collision.GetContact(0).point, radiusInfection, layerMaskPeople);
+            
+            
+            //collision.transform.GetComponent<Rigidbody>().isKinematic = true;
 
-            for (int i = 0; i < hitColliders.Length; i++)
-            {
 
-                changeMaterial(1, hitColliders[i].gameObject);
-            }
+
+
+            //Collider[] hitColliders = Physics.OverlapSphere(collision.GetContact(0).point, managerObj.GetComponent<spawnPeople>().radBetweenPeople*2f, layerMaskPeople);
+
+
+            //Debug.Log(hitColliders.Length);
+
+            //for (int i = 0; i < hitColliders.Length; i++)
+            //{
+
+            //    changeMaterial(1, hitColliders[i].gameObject);
+            //}
+
+           // Destroy(collision.gameObject);
         }
     }
 

@@ -9,6 +9,10 @@ public class spawner : MonoBehaviour
     public int currNumStudents;
     public int maxNumStudents;
 
+    public int daysClosed = 0;
+
+    public int maxDaysClosed = 0;
+
     public int spawnerNumber;
 
     public bool isOpen = true;
@@ -25,13 +29,16 @@ public class spawner : MonoBehaviour
 
         
 
-        maxNumStudents = globalScoreKeeper.current.maxNumStudentsInSchools;
+        //maxNumStudents = globalScoreKeeper.current.maxNumStudentsInSchools;
+        //maxDaysClosed = globalScoreKeeper.current.maxDaysSchoolClosed;
 
         kidsInThisClass = new List<GameObject>();
 
         GlobalEvents.current.onToggleClasses += changeClass;
 
         GlobalEvents.current.onToggleClasses += changeSchoolAppearance;
+
+        GlobalEvents.current.onDayPassed += countClosedDays;
 
         
         //foreach (Transform childTrans in transform)
@@ -49,6 +56,23 @@ public class spawner : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    void countClosedDays()
+    {
+        if (!isOpen)
+        {
+            daysClosed++;
+        }
+        else
+        {
+            if (daysClosed>0)
+            {
+                daysClosed--;
+            }
+            
+        }
     }
 
 

@@ -15,7 +15,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static float keepPercentHealthyToSick = 0.4f;
     public static int keepMaxHospitalCapacity = 20;
     public static int keepMaxSickSociety = 30;
-    public static int keepMaxNumStudentsInSchools = 15;
+    public static int keepMaxPossibleSchoolClose = keepMaxDays/2;
 
 
     public static int baseMaxDays;
@@ -26,10 +26,12 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static float basePercentHealthyToSick;
     public static int baseMaxHospitalCapacity;
     public static int baseMaxSickSociety;
-    public static int baseMaxNumStudentsInSchools;
+    public static int baseMaxPossibleSchoolClose;
 
     private void Awake()
     {
+        //keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 2f);
+
         if (keepCurrentLevel == 1)
         {
             baseMaxDays = keepMaxDays;
@@ -40,7 +42,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
             basePercentHealthyToSick = keepPercentHealthyToSick;
             baseMaxHospitalCapacity = keepMaxHospitalCapacity;
             baseMaxSickSociety = keepMaxSickSociety;
-            baseMaxNumStudentsInSchools = keepMaxNumStudentsInSchools;
+            baseMaxPossibleSchoolClose = keepMaxPossibleSchoolClose;
         }
         
 
@@ -57,7 +59,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepPercentHealthyToSick += 0.05f;
         keepMaxHospitalCapacity += 5;
         keepMaxSickSociety += 5;
-        keepMaxNumStudentsInSchools += 5;
+        keepMaxPossibleSchoolClose = keepMaxDays / 2;
+        //keepMaxNumStudentsInSchools += 5;
     }
 
     public static void resetStaticVals()
@@ -70,7 +73,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepPercentHealthyToSick = basePercentHealthyToSick;
         keepMaxHospitalCapacity = baseMaxHospitalCapacity;
         keepMaxSickSociety = baseMaxSickSociety;
-        keepMaxNumStudentsInSchools = baseMaxNumStudentsInSchools;
+        keepMaxPossibleSchoolClose = baseMaxPossibleSchoolClose;
+        //keepMaxNumStudentsInSchools = baseMaxNumStudentsInSchools;
     }
 
     public static void saveData()
@@ -84,7 +88,10 @@ public class KeepDataBetweenLevels : MonoBehaviour
         PlayerPrefs.SetFloat("percentHealthyToSick", keepPercentHealthyToSick);
         PlayerPrefs.SetInt("maxHospitalCapacity", keepMaxHospitalCapacity);
         PlayerPrefs.SetInt("maxSickSociety", keepMaxSickSociety);
-        PlayerPrefs.SetInt("maxNumStudentsInSchools", keepMaxNumStudentsInSchools);
+        PlayerPrefs.SetInt("maxPossibleSchoolClose", keepMaxPossibleSchoolClose);
+
+        
+        //PlayerPrefs.SetInt("maxNumStudentsInSchools", keepMaxNumStudentsInSchools);
     }
 
 
@@ -99,7 +106,9 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepPercentHealthyToSick = PlayerPrefs.GetFloat("percentHealthyToSick");
         keepMaxHospitalCapacity = PlayerPrefs.GetInt("maxHospitalCapacity");
         keepMaxSickSociety = PlayerPrefs.GetInt("maxSickSociety");
-        keepMaxNumStudentsInSchools = PlayerPrefs.GetInt("maxNumStudentsInSchools");
+
+        keepMaxPossibleSchoolClose = PlayerPrefs.GetInt("maxPossibleSchoolClose");
+        //keepMaxNumStudentsInSchools = PlayerPrefs.GetInt("maxNumStudentsInSchools");
     }
 
     // Start is called before the first frame update

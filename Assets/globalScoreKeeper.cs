@@ -28,23 +28,44 @@ public class globalScoreKeeper : MonoBehaviour
 
     public float percentHealthyToSick = 0.5f;
 
+    public int maxDaysSchoolClosed = 0;
+
     
 
     public int countHospitalized;
 
+
+
     private void Awake()
     {
         current = this;
+
+        currentLevel = KeepDataBetweenLevels.keepCurrentLevel;
+        percentHealthyToSick = KeepDataBetweenLevels.keepPercentHealthyToSick;
+        maxHospitalCapacity = KeepDataBetweenLevels.keepMaxHospitalCapacity;
+        maxSickSociety = KeepDataBetweenLevels.keepMaxSickSociety;
+
+        maxDaysSchoolClosed = KeepDataBetweenLevels.keepMaxPossibleSchoolClose;
+
+        for (int i = 0; i < allSpawners.Length; i++)
+        {
+            allSpawners[i].GetComponent<spawner>().maxNumStudents = maxNumStudentsInSchools;
+            allSpawners[i].GetComponent<spawner>().maxDaysClosed = maxDaysSchoolClosed;
+        }
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = KeepDataBetweenLevels.keepCurrentLevel;
-        percentHealthyToSick = KeepDataBetweenLevels.keepPercentHealthyToSick;
-        maxHospitalCapacity = KeepDataBetweenLevels.keepMaxHospitalCapacity;
-        maxSickSociety = KeepDataBetweenLevels.keepMaxSickSociety;
-        maxNumStudentsInSchools = KeepDataBetweenLevels.keepMaxNumStudentsInSchools;
+        //currentLevel = KeepDataBetweenLevels.keepCurrentLevel;
+        //percentHealthyToSick = KeepDataBetweenLevels.keepPercentHealthyToSick;
+        //maxHospitalCapacity = KeepDataBetweenLevels.keepMaxHospitalCapacity;
+        //maxSickSociety = KeepDataBetweenLevels.keepMaxSickSociety;
+
+        //maxDaysSchoolClosed = KeepDataBetweenLevels.keepMaxPossibleSchoolClose;
+
+        //maxNumStudentsInSchools = KeepDataBetweenLevels.keepMaxNumStudentsInSchools;
 
 
 

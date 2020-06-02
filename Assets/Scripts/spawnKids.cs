@@ -66,10 +66,24 @@ public class spawnKids : MonoBehaviour
     {
         //Vector3 randomOffset = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
 
-        
+        List<GameObject> openSpawners = new List<GameObject>();
+
+        foreach (GameObject spawner in allSpawners)
+        {
+            //This part is so we lower the amount of infected when we close school. (I)
+            if (spawner.GetComponent<spawner>().isOpen)
+            {
+                openSpawners.Add(spawner);
+            }
+        }
+
+        if (openSpawners.Count == 0)
+        {
+            return;
+        }
 
 
-        whichSpawnerSpawn = Random.Range(0, allSpawners.Length);
+        whichSpawnerSpawn = Random.Range(0, openSpawners.Count);
 
         
 
@@ -83,7 +97,7 @@ public class spawnKids : MonoBehaviour
 
         Vector3 randomOffset = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
 
-        foreach (Transform childTrans in allSpawners[whichSpawnerSpawn].transform)
+        foreach (Transform childTrans in openSpawners[whichSpawnerSpawn].transform)
         {
             if (childTrans.name == "kidSpawnerPoint")
             {
@@ -119,10 +133,10 @@ public class spawnKids : MonoBehaviour
         foreach (GameObject spawner in allSpawners)
         {
             //This part is so we lower the amount of infected when we close school. (I)
-            // if (spawner.GetComponent<spawner>().isOpen)
-            //{
-            openSpawners.Add(spawner);
-            //}
+            if (spawner.GetComponent<spawner>().isOpen)
+            {
+                openSpawners.Add(spawner);
+            }
         }
 
         if (openSpawners.Count == 0)
@@ -134,10 +148,10 @@ public class spawnKids : MonoBehaviour
 
 
         //This part is so we lower the amount of infected when we close school. (II)
-        if (!openSpawners[whichSpawnerSlide].GetComponent<spawner>().isOpen)
-        {
-            return;
-        }
+        //if (!openSpawners[whichSpawnerSlide].GetComponent<spawner>().isOpen)
+        //{
+        //    return;
+        //}
 
         List<GameObject> currSpawnerKids = openSpawners[whichSpawnerSlide].GetComponent<spawner>().kidsInThisClass;
         //List<int> currPlacesOfKids = allSpawners[whichSpawnerSlide].GetComponent<spawner>().placeOfKids;

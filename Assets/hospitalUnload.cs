@@ -5,6 +5,8 @@ using UnityEngine;
 public class hospitalUnload : MonoBehaviour
 {
 
+    public GameObject bubbleFull;
+
     private void Start()
     {
         GlobalEvents.current.onDayPassed += getHealthy;  
@@ -15,6 +17,15 @@ public class hospitalUnload : MonoBehaviour
     {
         if (other.tag == "ambulance")
         {
+
+            if (other.GetComponent<ambulanceTrigger>().sickInAmbulance == globalScoreKeeper.current.maxAmbulanceCapacity)
+            {
+                bubbleFull.GetComponent<Animator>().SetTrigger("isEmpty");
+                bubbleFull.GetComponent<Animator>().ResetTrigger("isFull");
+                
+            }
+
+
 
             //Debug.Log("HERE");
             globalScoreKeeper.current.numberHealthyHospital += other.GetComponent<ambulanceTrigger>().healthyInAmbulance;
@@ -38,7 +49,12 @@ public class hospitalUnload : MonoBehaviour
             }
 
 
+
+            
         }
+
+        
+
     }
 
 

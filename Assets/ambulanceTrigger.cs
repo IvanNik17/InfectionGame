@@ -10,13 +10,15 @@ public class ambulanceTrigger : MonoBehaviour
 
     public GameObject bubble;
 
+    public GameObject fullBubble;
+
 
 
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "kids" && (healthyInAmbulance +sickInAmbulance)<=globalScoreKeeper.current.maxAmbulanceCapacity )
+        if (other.tag == "kids" && (healthyInAmbulance +sickInAmbulance)<globalScoreKeeper.current.maxAmbulanceCapacity )
         {
 
             
@@ -51,6 +53,13 @@ public class ambulanceTrigger : MonoBehaviour
             
 
             //Destroy(other.gameObject);
+        }
+
+        if ((healthyInAmbulance + sickInAmbulance) == globalScoreKeeper.current.maxAmbulanceCapacity)
+        {
+            fullBubble.GetComponent<Animator>().SetTrigger("isFull");
+            
+
         }
     }
 }
