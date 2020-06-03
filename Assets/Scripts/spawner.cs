@@ -27,7 +27,7 @@ public class spawner : MonoBehaviour
     void Start()
     {
 
-        
+        maxDaysClosed = globalScoreKeeper.current.maxDaysSchoolClosed;
 
         //maxNumStudents = globalScoreKeeper.current.maxNumStudentsInSchools;
         //maxDaysClosed = globalScoreKeeper.current.maxDaysSchoolClosed;

@@ -45,7 +45,7 @@ public class gameEndInitializer : MonoBehaviour
         bool isSchoolOverflow = false;
         for (int i = 0; i < allSpawners.Length; i++)
         {
-            if (allSpawners[i].GetComponent<spawner>().daysClosed > allSpawners[i].GetComponent<spawner>().maxDaysClosed)
+            if (allSpawners[i].GetComponent<spawner>().daysClosed > globalScoreKeeper.current.maxDaysSchoolClosed)
             {
                 isSchoolOverflow = true;
             }

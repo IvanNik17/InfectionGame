@@ -18,6 +18,9 @@ public class endResultsShow : MonoBehaviour
     public GameObject textSchoolHeadline;
     public GameObject[] schoolsSubText;
 
+    public GameObject graphScreen;
+    public GameObject timeSlider;
+
 
     // Start is called before the first frame update
     void Start()
@@ -123,7 +126,23 @@ public class endResultsShow : MonoBehaviour
     }
 
 
-    
+    public void showStatistics()
+    {
+        graphScreen.SetActive(true);
+
+        timeSlider.GetComponent<Slider>().maxValue = globalTimer.current.daysPassed;
+
+        timeSlider.GetComponent<Slider>().value = globalTimer.current.daysPassed;
+
+        GlobalEvents.current.showStatisticsEvent();
+    }
+
+    public void hideStatistics()
+    {
+        graphScreen.SetActive(false);
+
+    }
+
 
 
     public void saveExit()

@@ -35,6 +35,18 @@ public class globalScoreKeeper : MonoBehaviour
     public int countHospitalized;
 
 
+    public List<float> infectedEachDay;
+
+    public List<float> inHospitalEachDay;
+
+    //public List<int> happinessEachDay_1_3;
+    //public List<int> happinessEachDay_4_6;
+    //public List<int> happinessEachDay_7_9;
+    //public List<int> happinessEachDay_10_12;
+
+    public List<List<float>> happinessClassesEachDay;
+
+
 
     private void Awake()
     {
@@ -67,28 +79,59 @@ public class globalScoreKeeper : MonoBehaviour
 
         //maxNumStudentsInSchools = KeepDataBetweenLevels.keepMaxNumStudentsInSchools;
 
+        infectedEachDay = new List<float>();
+        inHospitalEachDay = new List<float>();
 
+        happinessClassesEachDay = new List<List<float>>();
+
+        for (int i = 0; i < allSpawners.Length; i++)
+        {
+            happinessClassesEachDay.Add(new List<float>());
+        }
 
         //allSpawners = GameObject.FindGameObjectsWithTag("spawners");
 
         daysEachSchoolClosed = new int[allSpawners.Length];
-
         
+
 
         //for (int i = 0; i < daysEachSchoolClosed.GetLength(1); i++)
         //{
         //    daysEachSchoolClosed[0, i] = allSpawners[i].GetComponent<spawner>().spawnerNumber;
 
-            
+
         //}
 
         GlobalEvents.current.onDayPassed += countClosedDays;
+
+
+        GlobalEvents.current.onDayPassed += gatherStatisticalData;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+
+    void gatherStatisticalData()
+    {
+        infectedEachDay.Add(numberSickSociety);
+
+        inHospitalEachDay.Add(numberSickHospital);
+
+
+        for (int i = 0; i < allSpawners.Length; i++)
+        {
+
+            List<float> currClassList = happinessClassesEachDay[i];
+
+            currClassList.Add(allSpawners[i].GetComponent<spawner>().daysClosed);
+
+            happinessClassesEachDay[i] = currClassList;
+        }
+
     }
 
 

@@ -51,4 +51,13 @@ public class GlobalEvents : MonoBehaviour
     }
 
 
+    public event Action onShowStatisticsEvent;
+    public void showStatisticsEvent()
+    {
+        if (onShowStatisticsEvent != null)
+        {
+            onShowStatisticsEvent();
+        }
+    }
+
 }
