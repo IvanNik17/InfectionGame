@@ -50,7 +50,7 @@ public class societyCounter : MonoBehaviour
 
                 float percentageSick = ((float)globalScoreKeeper.current.numberSickSociety / (float)globalScoreKeeper.current.maxSickSociety)*100f;
 
-                Debug.Log(percentageSick);
+               // Debug.Log(percentageSick);
                 if (percentageSick % 10 == 0)
                 {
                     

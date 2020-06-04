@@ -11,13 +11,14 @@ public class healthBar : MonoBehaviour
 
     float maxValue;
 
-   // public Sprite[] arrayOfSprites; // 0 - good, 1 - medium, 2- bad
+    //public Sprite[] arrayOfSprites; // 0 - good, 1 - medium, 2- bad
 
-   
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        //mentalImageObj = this.transform.Find("tokenImage").gameObject;
         
     }
 
@@ -39,7 +40,8 @@ public class healthBar : MonoBehaviour
 
         barfill.color = gradient.Evaluate(currValue / maxValue);
 
-       
+        
+
         //if ( (currValue / maxValue) <= 0.20)
         //{
         //    mentalHealthImage.GetComponent<Image>().sprite = arrayOfSprites[0];

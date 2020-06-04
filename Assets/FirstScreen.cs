@@ -22,6 +22,8 @@ public class FirstScreen : MonoBehaviour
 
     public static float volumeLevel = 0.7f;
 
+    public GameObject highScoreObj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,21 @@ public class FirstScreen : MonoBehaviour
         {
             loadButton.GetComponent<Button>().interactable = false;
         }
+
+        int highScore = PlayerPrefs.GetInt("highScoreLevel");
+        if (highScore != 0)
+        {
+            highScoreObj.SetActive(true);
+            highScoreObj.GetComponentInChildren<Text>().text = "Highscore:" + "\n" + "Level " + PlayerPrefs.GetInt("highScoreLevel").ToString();
+        }
+        else
+        {
+            highScoreObj.SetActive(false);
+        }
+        
+
+
+
     }
 
     // Update is called once per frame

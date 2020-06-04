@@ -7,6 +7,8 @@ public class hospitalUnload : MonoBehaviour
 
     public GameObject bubbleFull;
 
+    public GameObject bubbleFull_hospital;
+
     private void Start()
     {
         GlobalEvents.current.onDayPassed += getHealthy;  
@@ -24,6 +26,9 @@ public class hospitalUnload : MonoBehaviour
                 bubbleFull.GetComponent<Animator>().ResetTrigger("isFull");
                 
             }
+
+            
+            
 
 
 
@@ -48,15 +53,30 @@ public class hospitalUnload : MonoBehaviour
 
             }
 
-
+            //Debug.Log(((float)globalScoreKeeper.current.numberSickHospital / (float)globalScoreKeeper.current.maxHospitalCapacity));
 
             
+
+
         }
 
-        
+
 
     }
 
+
+    private void Update()
+    {
+        if (((float)globalScoreKeeper.current.numberSickHospital / (float)globalScoreKeeper.current.maxHospitalCapacity) > 0.7f)
+        {
+            bubbleFull_hospital.GetComponent<Animator>().SetTrigger("isFull");
+        }
+        else
+        {
+            bubbleFull_hospital.GetComponent<Animator>().SetTrigger("isEmpty");
+            bubbleFull_hospital.GetComponent<Animator>().ResetTrigger("isFull");
+        }
+    }
 
     void getHealthy()
     {
@@ -67,5 +87,8 @@ public class hospitalUnload : MonoBehaviour
             int currNumInHospital = globalScoreKeeper.current.numberSickHospital - Mathf.Clamp((int)(KeepDataBetweenLevels.keepCurrentLevel / 2), 1, 100000);
             globalScoreKeeper.current.numberSickHospital = Mathf.Clamp(currNumInHospital, 0,100000);
         }
+
+
+        
     }
 }

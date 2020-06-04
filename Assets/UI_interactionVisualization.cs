@@ -54,8 +54,8 @@ public class UI_interactionVisualization : MonoBehaviour
 
         for (int i = 0; i < allSpawners.Length; i++)
         {
-            schoolCapacityVisualizers[i].GetComponent<healthBar>().setMaxValue((float)allSpawners[i].transform.GetComponent<spawner>().maxDaysClosed);
-            schoolCapacityVisualizers[i].GetComponent<healthBar>().setCurrValue((float)allSpawners[i].transform.GetComponent<spawner>().daysClosed);
+            schoolCapacityVisualizers[i].GetComponent<mentalBar>().setMaxValueMental((float)allSpawners[i].transform.GetComponent<spawner>().maxDaysClosed);
+            schoolCapacityVisualizers[i].GetComponent<mentalBar>().setCurrValueMental((float)allSpawners[i].transform.GetComponent<spawner>().daysClosed);
         }
 
         //foreach (GameObject currSpawner in allSpawners)
@@ -109,7 +109,7 @@ public class UI_interactionVisualization : MonoBehaviour
         for (int i = 0; i < allSpawners.Length; i++)
         {
             
-            schoolCapacityVisualizers[i].GetComponent<healthBar>().setCurrValue((float)allSpawners[i].transform.GetComponent<spawner>().daysClosed);
+            schoolCapacityVisualizers[i].GetComponent<mentalBar>().setCurrValueMental((float)allSpawners[i].transform.GetComponent<spawner>().daysClosed);
         }
 
 
