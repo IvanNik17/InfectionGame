@@ -39,16 +39,26 @@ public class hospitalUnload : MonoBehaviour
 
             globalScoreKeeper.current.countHospitalized += other.GetComponent<ambulanceTrigger>().sickInAmbulance;
 
+            GameObject[] allSickInAmbulance = new GameObject[other.GetComponent<ambulanceTrigger>().sickInAmbulance];
+
             other.GetComponent<ambulanceTrigger>().sickInAmbulance = 0;
             other.GetComponent<ambulanceTrigger>().healthyInAmbulance = 0;
 
-            foreach (Transform child in other.transform)
+            Transform[] childsTransforms = other.transform.GetComponentsInChildren<Transform>();
+
+            foreach (Transform child in childsTransforms)
             {
-                if (child.name != "Ambulance")
+                if (child.tag == "kids")
                 {
                     this.GetComponent<AudioSource>().Play();
 
-                    GameObject.Destroy(child.gameObject);
+                    //GameObject.Destroy(child.gameObject);
+                   // child.transform.parent = null;
+                    child.transform.GetComponent<SkinnedMeshRenderer>().enabled = true;
+
+
+                    StartCoroutine(child.GetComponent<kids>().MoveToPosition(other.transform.position, this.transform.position, 1));
+                    child.transform.SetParent(null);
                 }
 
             }

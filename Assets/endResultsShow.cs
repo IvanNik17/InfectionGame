@@ -21,6 +21,12 @@ public class endResultsShow : MonoBehaviour
     public GameObject graphScreen;
     public GameObject timeSlider;
 
+    public AudioSource mainSource;
+    public AudioSource endSource;
+
+    public AudioClip[] goodBadAudio;
+
+    bool isPlayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +41,20 @@ public class endResultsShow : MonoBehaviour
 
         if (checkEnding >= 0 )
         {
+            //mainSource.Stop();
+
+            mainSource.volume = 0.01f;
+
             endScreen.SetActive(true);
+
+            AudioClip endClip = goodBadAudio[1];
 
             string endText = "";
             if (checkEnding == 0)
             {
                 endText = "You managed to survive the epidemic!";
+                endClip = goodBadAudio[0];
+                
             }
             else if (checkEnding == 1)
             {
@@ -50,15 +64,24 @@ public class endResultsShow : MonoBehaviour
             else if (checkEnding == 2)
             {
 
-                endText = "You missed too many sick people!";
+                endText = "Too many sick people in society!";
             }
             else if (checkEnding == 3)
             {
 
-                endText = "Schools capacity was exceeded!";
+                endText = "Children got depressed, because classes were closed for too long!";
             }
             endTextFieldHeadline.GetComponent<Text>().text = endText;
 
+            
+
+            if (!endSource.isPlaying && !isPlayed)
+            {
+                endSource.clip = endClip;
+                endSource.Play();
+                isPlayed = true;
+            }
+            
 
             textHospitalized.GetComponent<Text>().text = "There were <b>" + globalScoreKeeper.current.countHospitalized.ToString() + " </b> people hospitalized";
 

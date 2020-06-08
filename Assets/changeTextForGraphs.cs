@@ -38,11 +38,11 @@ public class changeTextForGraphs : MonoBehaviour
 
     void changeText()
     {
-        textInfected.GetComponent<Text>().text = "At day " + dateToShow + " there were " + globalScoreKeeper.current.infectedEachDay[Mathf.Clamp(dateToShow - 1,0,99999)] + " infected";
+        textInfected.GetComponent<Text>().text = "At day <b>" + dateToShow + "</b> \n there were <b>" + globalScoreKeeper.current.infectedEachDay[Mathf.Clamp(dateToShow - 1,0,99999)] + "</b> infected";
 
-        textHospitalized.GetComponent<Text>().text = "At day " + dateToShow + " there were " + globalScoreKeeper.current.inHospitalEachDay[Mathf.Clamp(dateToShow - 1, 0, 99999)] + " hospitalized";
+        textHospitalized.GetComponent<Text>().text = "At day <b>" + dateToShow + "</b> \n there were <b>" + globalScoreKeeper.current.inHospitalEachDay[Mathf.Clamp(dateToShow - 1, 0, 99999)] + "</b> hospitalized";
 
-        textHappiness.GetComponent<Text>().text = "Mental health for the classes at day " + dateToShow;
+        textHappiness.GetComponent<Text>().text = "Depression level for different grades at day <b>" + dateToShow + "</b>";
     }
 
     // Start is called before the first frame update

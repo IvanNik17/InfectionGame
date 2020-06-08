@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using UnityEngine.Analytics;
+
 public class FirstScreen : MonoBehaviour
 {
 
     public GameObject howToObj;
     public GameObject settingsObj;
+    public GameObject creditsObj;
 
     public GameObject volumeTxt;
 
@@ -18,7 +21,7 @@ public class FirstScreen : MonoBehaviour
 
     public GameObject loadButton;
 
-    int currMenu; //0 - main, 1 - how to, 2 - settings
+    int currMenu; //0 - main, 1 - how to, 2 - settings, 3 - credits;
 
     public static float volumeLevel = 0.7f;
 
@@ -31,6 +34,8 @@ public class FirstScreen : MonoBehaviour
 
         volumeSlider.GetComponent<Slider>().value = volumeLevel;
 
+
+        Debug.Log(AnalyticsSessionInfo.sessionId);
         
 
         if (PlayerPrefs.GetInt("currentLevel") > 1)
@@ -98,6 +103,12 @@ public class FirstScreen : MonoBehaviour
         currMenu = 2;
     }
 
+    public void creditsShow()
+    {
+        creditsObj.SetActive(true);
+        currMenu = 3;
+    }
+
 
     public void quitApp()
     {
@@ -113,6 +124,10 @@ public class FirstScreen : MonoBehaviour
         else if(currMenu == 2)
         {
             settingsObj.SetActive(false);
+        }
+        else if (currMenu == 3)
+        {
+            creditsObj.SetActive(false);
         }
     }
 

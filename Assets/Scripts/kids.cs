@@ -39,4 +39,40 @@ public class kids : MonoBehaviour
         }
 
     }
+
+
+    public IEnumerator MoveToPosition(Vector3 startPos, Vector3 newPosition, float time)
+    {
+        float elapsedTime = 0f;
+
+        float upwardsT = 0f;
+
+        float heightRand = Random.Range(2f, 5f);
+
+        
+
+        while (elapsedTime < time)
+        {
+
+            if (elapsedTime < (time / 2))
+            {
+                upwardsT += 2 * Time.deltaTime;
+            }
+            else
+            {
+                upwardsT -= 2 * Time.deltaTime;
+            }
+
+
+            Vector3 horizontalPos = Vector3.Lerp(startPos, newPosition, (elapsedTime / time));
+
+            transform.position = new Vector3(horizontalPos.x, Mathf.Lerp(horizontalPos.y, horizontalPos.y + heightRand, upwardsT), horizontalPos.z);
+            elapsedTime += Time.deltaTime;
+            yield return 1;
+        }
+
+        transform.position = newPosition;
+
+        Destroy(this.gameObject);
+    }
 }

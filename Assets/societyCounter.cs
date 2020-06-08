@@ -12,9 +12,16 @@ public class societyCounter : MonoBehaviour
 
     List<bool> houseInfected;
 
+    Vector3 societyArea;
+    Vector3 societyCenter;
+
+    public GameObject sadbubble;
+
 
     void Start()
     {
+        societyArea = this.transform.localScale;
+        societyCenter = this.transform.position;
 
         housesInSociety = new List<GameObject>();
 
@@ -27,7 +34,7 @@ public class societyCounter : MonoBehaviour
                 housesInSociety.Add(childTransf.gameObject);
                 houseInfected.Add(false);
             }
-            
+
         }
     }
 
@@ -39,21 +46,26 @@ public class societyCounter : MonoBehaviour
             {
                 globalScoreKeeper.current.numberHealthySociety++;
 
-                
+
             }
             else if (other.GetComponent<kids>().condition == 1)
             {
                 globalScoreKeeper.current.numberSickSociety++;
 
+                Vector3 sadbubblePos = societyCenter + new Vector3(Random.Range(-societyArea.x / 2, societyArea.x / 2), 0, 0);
+                sadbubble.transform.position = sadbubblePos;
+
+                sadbubble.GetComponentInChildren<Animator>().SetTrigger("showBubble");
+
 
                 GetComponent<AudioSource>().Play();
 
-                float percentageSick = ((float)globalScoreKeeper.current.numberSickSociety / (float)globalScoreKeeper.current.maxSickSociety)*100f;
+                float percentageSick = ((float)globalScoreKeeper.current.numberSickSociety / (float)globalScoreKeeper.current.maxSickSociety) * 100f;
 
-               // Debug.Log(percentageSick);
+                // Debug.Log(percentageSick);
                 if (percentageSick % 10 == 0)
                 {
-                    
+
                     for (int i = 0; i < housesInSociety.Count; i++)
                     {
                         //bool findSuscept = false;
@@ -66,13 +78,13 @@ public class societyCounter : MonoBehaviour
                                 if (subHouse.name == "HomeSusceptible")
                                 {
                                     subHouse.gameObject.SetActive(false);
-                                    
+
                                 }
 
                                 if (subHouse.name == "HomeInfected")
                                 {
                                     subHouse.gameObject.SetActive(true);
-                                    
+
                                 }
 
 
@@ -95,7 +107,7 @@ public class societyCounter : MonoBehaviour
                         //        findSick = true;
                         //    }
 
-                            
+
                         //}
 
                         //if (findSuscept && findSick)

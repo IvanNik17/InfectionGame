@@ -13,9 +13,6 @@ public class ambulanceTrigger : MonoBehaviour
     public GameObject fullBubble;
 
 
-
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "kids" && (healthyInAmbulance +sickInAmbulance)<globalScoreKeeper.current.maxAmbulanceCapacity )
@@ -48,6 +45,8 @@ public class ambulanceTrigger : MonoBehaviour
                 other.transform.parent = transform;
 
                 other.transform.GetComponent<SkinnedMeshRenderer>().enabled = false;
+
+                
             }
 
             
