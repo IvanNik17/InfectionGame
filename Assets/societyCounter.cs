@@ -17,6 +17,8 @@ public class societyCounter : MonoBehaviour
 
     public GameObject sadbubble;
 
+    int infectShowCounter = 1;
+
 
     void Start()
     {
@@ -60,12 +62,16 @@ public class societyCounter : MonoBehaviour
 
                 GetComponent<AudioSource>().Play();
 
-                float percentageSick = ((float)globalScoreKeeper.current.numberSickSociety / (float)globalScoreKeeper.current.maxSickSociety) * 100f;
+                //float percentageSick = ((float)globalScoreKeeper.current.numberSickSociety / (float)globalScoreKeeper.current.maxSickSociety) * 100f;
 
-                // Debug.Log(percentageSick);
-                if (percentageSick % 10 == 0)
+                float oneHouseChunk = (float)globalScoreKeeper.current.maxSickSociety / 10f;
+
+                //Debug.Log((float)globalScoreKeeper.current.numberSickSociety  + " | " + oneHouseChunk * (float)infectShowCounter);
+                //Debug.Log((float)globalScoreKeeper.current.numberSickSociety + " | " + (float)globalScoreKeeper.current.maxSickSociety);
+               // if (percentageSick % 10 == 0)
+                if (oneHouseChunk * (float)infectShowCounter <= (float)globalScoreKeeper.current.numberSickSociety)
                 {
-
+                    infectShowCounter++;
                     for (int i = 0; i < housesInSociety.Count; i++)
                     {
                         //bool findSuscept = false;

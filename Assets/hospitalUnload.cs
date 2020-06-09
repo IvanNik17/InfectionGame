@@ -94,7 +94,8 @@ public class hospitalUnload : MonoBehaviour
         {
             //Debug.Log("BLALBA" + Mathf.Clamp((int)(KeepDataBetweenLevels.keepCurrentLevel / 2), 1, 100000));
 
-            int currNumInHospital = globalScoreKeeper.current.numberSickHospital - Mathf.Clamp((int)(KeepDataBetweenLevels.keepCurrentLevel / 2), 1, 100000);
+            //int currNumInHospital = globalScoreKeeper.current.numberSickHospital - Mathf.Clamp((int)(KeepDataBetweenLevels.keepCurrentLevel / 2), 1, 100000);
+            int currNumInHospital = globalScoreKeeper.current.numberSickHospital - 1;
             globalScoreKeeper.current.numberSickHospital = Mathf.Clamp(currNumInHospital, 0,100000);
         }
 

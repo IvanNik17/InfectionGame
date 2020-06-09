@@ -36,7 +36,11 @@ public class ambulanceTrigger : MonoBehaviour
                 sickInAmbulance++;
 
 
-                bubble.GetComponent<Animator>().SetTrigger("showBubble");
+                if ((healthyInAmbulance + sickInAmbulance) < globalScoreKeeper.current.maxAmbulanceCapacity)
+                {
+                    bubble.GetComponent<Animator>().SetTrigger("showBubble");
+                }
+                
 
 
                 other.transform.position = transform.position;

@@ -83,9 +83,15 @@ public class spawnKids : MonoBehaviour
         }
 
 
-        whichSpawnerSpawn = Random.Range(0, openSpawners.Count);
+        whichSpawnerSpawn = Random.Range(0, allSpawners.Length);
 
-        
+        //This part is so we lower the amount of infected when we close school. (II)
+        if (!allSpawners[whichSpawnerSpawn].GetComponent<spawner>().isOpen)
+        {
+            return;
+        }
+
+
 
         int currCondition = sickHealthyChance();
 
@@ -97,7 +103,7 @@ public class spawnKids : MonoBehaviour
 
         Vector3 randomOffset = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
 
-        foreach (Transform childTrans in openSpawners[whichSpawnerSpawn].transform)
+        foreach (Transform childTrans in allSpawners[whichSpawnerSpawn].transform)
         {
             if (childTrans.name == "kidSpawnerPoint")
             {
@@ -144,16 +150,16 @@ public class spawnKids : MonoBehaviour
             return;
         }
 
-        whichSpawnerSlide = Random.Range(0, openSpawners.Count);
+        whichSpawnerSlide = Random.Range(0, allSpawners.Length);
 
 
         //This part is so we lower the amount of infected when we close school. (II)
-        //if (!openSpawners[whichSpawnerSlide].GetComponent<spawner>().isOpen)
-        //{
-        //    return;
-        //}
+        if (!allSpawners[whichSpawnerSlide].GetComponent<spawner>().isOpen)
+        {
+            return;
+        }
 
-        List<GameObject> currSpawnerKids = openSpawners[whichSpawnerSlide].GetComponent<spawner>().kidsInThisClass;
+        List<GameObject> currSpawnerKids = allSpawners[whichSpawnerSlide].GetComponent<spawner>().kidsInThisClass;
         //List<int> currPlacesOfKids = allSpawners[whichSpawnerSlide].GetComponent<spawner>().placeOfKids;
 
         if (currSpawnerKids.Count>0)
@@ -164,13 +170,15 @@ public class spawnKids : MonoBehaviour
             {
                 if (currSpawnerKids[i]!=null && currSpawnerKids[i].GetComponent<kids>().currentPlace == 0)
                 {
-                    foreach (Transform childTrans in openSpawners[whichSpawnerSlide].transform)
+                    foreach (Transform childTrans in allSpawners[whichSpawnerSlide].transform)
                     {
                         if (childTrans.name == "kidSliderPoint")
                         {
 
-                            openSpawners[whichSpawnerSlide].GetComponent<spawner>().currNumStudents--;
+                            allSpawners[whichSpawnerSlide].GetComponent<spawner>().currNumStudents--;
                             currSpawnerKids[i].transform.position = childTrans.position + randomOffset;
+                            currSpawnerKids[i].transform.rotation = Quaternion.Euler(-90 + Random.Range(-50f, 50f), 0 + Random.Range(-50f, 50f), -180 + Random.Range(-50f, 50f));
+
                             currSpawnerKids[i].GetComponent<Rigidbody>().isKinematic = false;
                             currSpawnerKids[i].GetComponent<SkinnedMeshRenderer>().enabled = true;
                             currSpawnerKids[i].GetComponent<SphereCollider>().enabled = true;

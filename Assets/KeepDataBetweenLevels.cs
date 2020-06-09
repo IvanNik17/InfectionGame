@@ -7,12 +7,12 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     //40 , 0.5 ,0.5 , 1, 0.5 , 30, 40, 20
 
-    public static int keepMaxDays = 20; // 20
+    public static int keepMaxDays = 25; // 20
     public static float keepSpawnTime = 0.7f;
     public static float keepSlideTime = 0.7f;
 
     public static int keepCurrentLevel = 1;
-    public static float keepPercentHealthyToSick = 0.4f;
+    public static float keepPercentHealthyToSick = 0.5f; // 0.5f
     public static int keepMaxHospitalCapacity = 20;
     public static int keepMaxSickSociety = 30;
     public static int keepMaxPossibleSchoolClose = keepMaxDays/2;
@@ -51,15 +51,18 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     public static void nextLevel()
     {
-        keepMaxDays += 10;
-        keepSpawnTime = Mathf.Clamp(keepSpawnTime- 0.1f,0.1f, 99999);
-        keepSlideTime = Mathf.Clamp(keepSlideTime - 0.1f, 0.1f, 99999);
+        //keepMaxDays += 5;
+        keepSpawnTime = Mathf.Clamp(keepSpawnTime- 0.1f,0.2f, 99999);
+        keepSlideTime = Mathf.Clamp(keepSlideTime - 0.1f, 0.2f, 99999);
 
         keepCurrentLevel += 1;
-        keepPercentHealthyToSick = Mathf.Clamp(keepPercentHealthyToSick + 0.05f, 0.1f, 0.9f);
-        keepMaxHospitalCapacity += 5;
-        keepMaxSickSociety += 5;
+        keepPercentHealthyToSick = Mathf.Clamp(keepPercentHealthyToSick + 0.05f, 0.1f, 0.8f);
+        keepMaxHospitalCapacity = Mathf.Clamp(keepMaxHospitalCapacity + 5, 20, 55);
+        keepMaxSickSociety = Mathf.Clamp(keepMaxSickSociety + 2, 30, 46);
         keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 3);
+
+
+        Debug.Log("spawnTime " + keepSpawnTime + " HealthyToSick " + keepPercentHealthyToSick + " HospitalCapacity " + keepMaxHospitalCapacity + " SickSociety " + keepMaxSickSociety);
         //keepMaxNumStudentsInSchools += 5;
     }
 
