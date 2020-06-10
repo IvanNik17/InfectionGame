@@ -24,6 +24,8 @@ public class globalTimer : MonoBehaviour
     public int hourPassed = 0;
     public float timerHour = 0;
 
+    public float levelTime = 0;
+
 
     private void Awake()
     {
@@ -41,6 +43,8 @@ public class globalTimer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        levelTime += Time.fixedDeltaTime;
 
         if (gameEndInitializer.current.whatEnd == -1)
         {

@@ -11,9 +11,13 @@ public class gameEndInitializer : MonoBehaviour
 
     GameObject[] allSpawners;
 
+    int prevWhatEnd;
+
     private void Awake()
     {
         current = this;
+
+        prevWhatEnd = whatEnd;
     }
 
 
@@ -55,5 +59,14 @@ public class gameEndInitializer : MonoBehaviour
         {
             whatEnd = 3;
         }
+
+        Debug.Log(whatEnd + " | " + prevWhatEnd);
+        if (whatEnd != prevWhatEnd && whatEnd>=-1 && prevWhatEnd >= -1)
+        {
+            GlobalEvents.current.levelEndingEvent(whatEnd);
+        }
+
+
+        prevWhatEnd = whatEnd;
     }
 }

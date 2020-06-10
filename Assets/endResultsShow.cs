@@ -10,6 +10,8 @@ public class endResultsShow : MonoBehaviour
     public GameObject endScreen;
     public GameObject endTextFieldHeadline;
 
+    public GameObject rateScreen;
+
     public GameObject buttonRestart;
     public GameObject buttonNext;
 
@@ -28,6 +30,7 @@ public class endResultsShow : MonoBehaviour
 
     bool isPlayed = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,10 @@ public class endResultsShow : MonoBehaviour
     void Update()
     {
         int checkEnding = gameEndInitializer.current.whatEnd;
+
+
+
+        
 
         if (checkEnding >= 0 )
         {
@@ -127,6 +134,9 @@ public class endResultsShow : MonoBehaviour
 
     public void Restart()
     {
+
+        GlobalEvents.current.restartLevelEvent();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().path);
     }
 
@@ -142,10 +152,25 @@ public class endResultsShow : MonoBehaviour
         //globalScoreKeeper.current.maxSickSociety += 5;
         //globalScoreKeeper.current.maxNumStudentsInSchools += 5;
 
+        if (KeepDataBetweenLevels.keepGameRating == 0 && KeepDataBetweenLevels.keepCurrentLevel>0)
+        {
+            rateScreen.SetActive(true);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            KeepDataBetweenLevels.nextLevel();
 
-        KeepDataBetweenLevels.nextLevel();
+            GlobalEvents.current.nextLevelEvent();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+
+
+            
+        }
+
+
+        
     }
 
 
@@ -180,6 +205,9 @@ public class endResultsShow : MonoBehaviour
         KeepDataBetweenLevels.saveData();
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+
+        GlobalEvents.current.exitGameEvent();
 
         SceneManager.LoadScene(nextSceneIndex);
 

@@ -28,6 +28,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static int baseMaxSickSociety;
     public static int baseMaxPossibleSchoolClose;
 
+    public static int keepGameRating = 0;
+
     private void Awake()
     {
         //keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 2f);
@@ -77,6 +79,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepMaxHospitalCapacity = baseMaxHospitalCapacity;
         keepMaxSickSociety = baseMaxSickSociety;
         keepMaxPossibleSchoolClose = baseMaxPossibleSchoolClose;
+
+        keepGameRating = 0;
         //keepMaxNumStudentsInSchools = baseMaxNumStudentsInSchools;
     }
 

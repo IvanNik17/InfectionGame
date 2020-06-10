@@ -23,6 +23,8 @@ public class startScreen : MonoBehaviour
     {
         gameEndInitializer.current.whatEnd = -1;
 
+        GlobalEvents.current.startGameEvent();
+
         startScreenObj.SetActive(false);
     }
 

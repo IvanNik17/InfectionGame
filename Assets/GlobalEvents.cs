@@ -60,4 +60,50 @@ public class GlobalEvents : MonoBehaviour
         }
     }
 
+    public event Action<int> onlevelEndingEvent;
+    public void levelEndingEvent(int whichEnding)
+    {
+        if (onlevelEndingEvent != null)
+        {
+            onlevelEndingEvent(whichEnding);
+        }
+    }
+
+    public event Action onNextLevelEvent;
+    public void nextLevelEvent()
+    {
+        if (onNextLevelEvent != null)
+        {
+            onNextLevelEvent();
+        }
+    }
+
+    public event Action onRestartLevelEvent;
+    public void restartLevelEvent()
+    {
+        if (onRestartLevelEvent != null)
+        {
+            onRestartLevelEvent();
+        }
+    }
+
+    public event Action onExitGameEvent;
+    public void exitGameEvent()
+    {
+        if (onExitGameEvent != null)
+        {
+            onExitGameEvent();
+        }
+    }
+
+    public event Action onStartGameEvent;
+    public void startGameEvent()
+    {
+        if (onStartGameEvent != null)
+        {
+            onStartGameEvent();
+        }
+    }
+
+
 }

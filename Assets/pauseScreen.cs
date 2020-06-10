@@ -40,6 +40,8 @@ public class pauseScreen : MonoBehaviour
 
         pauseScreenObj.SetActive(false);
 
+        GlobalEvents.current.restartLevelEvent();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().path);
     }
 
@@ -53,6 +55,8 @@ public class pauseScreen : MonoBehaviour
         KeepDataBetweenLevels.saveData();
 
         int prevSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+        GlobalEvents.current.exitGameEvent();
 
         SceneManager.LoadScene(prevSceneIndex);
     }
