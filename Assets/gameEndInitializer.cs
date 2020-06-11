@@ -60,7 +60,7 @@ public class gameEndInitializer : MonoBehaviour
             whatEnd = 3;
         }
 
-        Debug.Log(whatEnd + " | " + prevWhatEnd);
+        //Debug.Log(whatEnd + " | " + prevWhatEnd);
         if (whatEnd != prevWhatEnd && whatEnd>=-1 && prevWhatEnd >= -1)
         {
             GlobalEvents.current.levelEndingEvent(whatEnd);

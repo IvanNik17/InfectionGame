@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Text;
 
 public class KeepDataBetweenLevels : MonoBehaviour
 {
 
     //40 , 0.5 ,0.5 , 1, 0.5 , 30, 40, 20
 
-    public static int keepMaxDays = 25; // 20
+    public static int keepMaxDays = 5; // 20
     public static float keepSpawnTime = 0.7f;
     public static float keepSlideTime = 0.7f;
 
@@ -30,6 +32,10 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     public static int keepGameRating = 0;
 
+    //public static string keepDeviceID = "";
+    public static string keepPlaySessionID = " ";
+
+
     private void Awake()
     {
         //keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 2f);
@@ -45,6 +51,17 @@ public class KeepDataBetweenLevels : MonoBehaviour
             baseMaxHospitalCapacity = keepMaxHospitalCapacity;
             baseMaxSickSociety = keepMaxSickSociety;
             baseMaxPossibleSchoolClose = keepMaxPossibleSchoolClose;
+
+            Debug.Log("HERE");
+        }
+
+
+        if (!PlayerPrefs.HasKey("currDeviceID"))
+        {
+            string deviceID_MD5 = CreateMD5(generateUniqueID());
+
+            Debug.Log("Device ID: " + deviceID_MD5);
+            PlayerPrefs.SetString("currDeviceID", deviceID_MD5);
         }
         
 
@@ -125,15 +142,41 @@ public class KeepDataBetweenLevels : MonoBehaviour
         //keepMaxNumStudentsInSchools = PlayerPrefs.GetInt("maxNumStudentsInSchools");
     }
 
-    // Start is called before the first frame update
-    void Start()
+
+    public static string CreateMD5(string input)
     {
-        
+        // Use input string to calculate MD5 hash
+        using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+        {
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+            // Convert the byte array to hexadecimal string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                sb.Append(hashBytes[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public static string generateUniqueID()
     {
-        
+        var random = new System.Random();
+        DateTime epochStart = new System.DateTime(1970, 1, 1, 8, 0, 0, System.DateTimeKind.Utc);
+        double timestamp = (System.DateTime.UtcNow - epochStart).TotalSeconds;
+
+        string uniqueID = Application.systemLanguage                            //Language
+                + "-" + Application.platform                                           //Device    
+                + "-" + String.Format("{0:X}", Convert.ToInt32(timestamp))                //Time
+                + "-" + String.Format("{0:X}", Convert.ToInt32(Time.time * 1000000))        //Time in game
+                + "-" + String.Format("{0:X}", random.Next(1000000000));                //random number
+
+        //Debug.Log("Generated Unique ID: " + uniqueID);
+
+        return uniqueID;
     }
+
+
 }

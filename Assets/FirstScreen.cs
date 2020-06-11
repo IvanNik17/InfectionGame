@@ -35,7 +35,7 @@ public class FirstScreen : MonoBehaviour
         volumeSlider.GetComponent<Slider>().value = volumeLevel;
 
 
-        Debug.Log(AnalyticsSessionInfo.sessionId);
+        //Debug.Log(AnalyticsSessionInfo.sessionId);
         
 
         if (PlayerPrefs.GetInt("currentLevel") > 1)
@@ -77,12 +77,20 @@ public class FirstScreen : MonoBehaviour
         KeepDataBetweenLevels.resetStaticVals();
 
         SceneManager.LoadScene(nextSceneIndex);
+
+
+        KeepDataBetweenLevels.keepPlaySessionID = KeepDataBetweenLevels.CreateMD5(KeepDataBetweenLevels.generateUniqueID());
+
+        PlayerPrefs.SetString("currPlaySessionID", KeepDataBetweenLevels.keepPlaySessionID);
+
     }
 
 
     public void goToGameLoad()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        KeepDataBetweenLevels.keepPlaySessionID = PlayerPrefs.GetString("currPlaySessionID");
 
         KeepDataBetweenLevels.loadData();
 

@@ -50,8 +50,11 @@ public class captureAndSendInfo : MonoBehaviour
             {"GameRating", new List<string>()}
         };
 
-        deviceId = AnalyticsSessionInfo.userId;
-        playId = AnalyticsSessionInfo.sessionId.ToString();
+        deviceId = PlayerPrefs.GetString("currDeviceID");
+        playId = KeepDataBetweenLevels.keepPlaySessionID;
+
+        Debug.Log(deviceId);
+        Debug.Log(playId);
 
         GlobalEvents.current.onDayPassed += eachDayData;
 
@@ -67,6 +70,7 @@ public class captureAndSendInfo : MonoBehaviour
 
         GlobalEvents.current.onStartGameEvent += startGameData;
 
+
     }
 
     void Start()
@@ -79,6 +83,8 @@ public class captureAndSendInfo : MonoBehaviour
     {
         
     }
+
+    
 
 
     void showLastSave()
