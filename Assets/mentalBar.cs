@@ -41,16 +41,17 @@ public class mentalBar : MonoBehaviour
         barfill.color = gradient.Evaluate(currValue / maxValue);
 
 
+        mentalImage.GetComponent<Animator>().SetFloat("attentionDepression", (currValue / maxValue));
 
-        if ((currValue / maxValue) <= 0.20)
+        if ((currValue / maxValue) <= 0.25)
         {
             mentalImage.sprite = arrayOfSprites[0];
         }
-        else if ((currValue / maxValue) > 0.20 && (currValue / maxValue) <= 0.70)
+        else if ((currValue / maxValue) > 0.25 && (currValue / maxValue) <= 0.60)
         {
             mentalImage.sprite = arrayOfSprites[1];
         }
-        else if ((currValue / maxValue) > 0.70)
+        else if ((currValue / maxValue) > 0.60)
         {
             mentalImage.sprite = arrayOfSprites[2];
         }

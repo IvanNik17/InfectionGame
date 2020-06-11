@@ -57,6 +57,8 @@ public class globalScoreKeeper : MonoBehaviour
         maxHospitalCapacity = KeepDataBetweenLevels.keepMaxHospitalCapacity;
         maxSickSociety = KeepDataBetweenLevels.keepMaxSickSociety;
 
+        maxAmbulanceCapacity = KeepDataBetweenLevels.keepMaxAmbulanceCapacity;
+
         maxDaysSchoolClosed = KeepDataBetweenLevels.keepMaxPossibleSchoolClose;
 
         for (int i = 0; i < allSpawners.Length; i++)
@@ -111,7 +113,7 @@ public class globalScoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 

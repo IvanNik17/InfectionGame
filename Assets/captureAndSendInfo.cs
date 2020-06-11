@@ -20,7 +20,7 @@ public class captureAndSendInfo : MonoBehaviour
     private void Awake()
     {
         current = this;
-
+        
         logs = new Dictionary<string, List<string>>() //create a new dictionary
 		{
             {"GameVersion", new List<string>()},
@@ -124,6 +124,13 @@ public class captureAndSendInfo : MonoBehaviour
     }
 
 
+    void sendToServer()
+    {
+        this.GetComponent<ConnectToMySQL>().AddToUploadQueue(logs);
+        this.GetComponent<ConnectToMySQL>().UploadNow();
+    }
+
+
     void eachDayData()
     {
 
@@ -158,6 +165,8 @@ public class captureAndSendInfo : MonoBehaviour
         gatherAndSaveData(currEventType, currGameState);
 
         showLastSave();
+
+        sendToServer();
     }
 
     void restartLevelData()
@@ -169,6 +178,8 @@ public class captureAndSendInfo : MonoBehaviour
         gatherAndSaveData(currEventType, currGameState);
 
         showLastSave();
+
+        sendToServer();
     }
 
 
@@ -181,6 +192,8 @@ public class captureAndSendInfo : MonoBehaviour
         gatherAndSaveData(currEventType, currGameState);
 
         showLastSave();
+
+        sendToServer();
     }
 
 

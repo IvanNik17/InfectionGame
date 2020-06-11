@@ -20,6 +20,9 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static int keepMaxPossibleSchoolClose = keepMaxDays/2;
 
 
+    public static int keepMaxAmbulanceCapacity = 5;
+
+
     public static int baseMaxDays;
     public static float baseSpawnTime;
     public static float baseSlideTime ;
@@ -29,6 +32,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static int baseMaxHospitalCapacity;
     public static int baseMaxSickSociety;
     public static int baseMaxPossibleSchoolClose;
+
+    public static int baseMaxAmbulanceCapacity;
 
     public static int keepGameRating = 0;
 
@@ -52,7 +57,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
             baseMaxSickSociety = keepMaxSickSociety;
             baseMaxPossibleSchoolClose = keepMaxPossibleSchoolClose;
 
-            Debug.Log("HERE");
+            baseMaxAmbulanceCapacity = keepMaxAmbulanceCapacity;
         }
 
 
@@ -81,6 +86,9 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 3);
 
 
+        keepMaxAmbulanceCapacity = Mathf.Clamp(keepMaxAmbulanceCapacity + 1, 4, 10);
+
+
         Debug.Log("spawnTime " + keepSpawnTime + " HealthyToSick " + keepPercentHealthyToSick + " HospitalCapacity " + keepMaxHospitalCapacity + " SickSociety " + keepMaxSickSociety);
         //keepMaxNumStudentsInSchools += 5;
     }
@@ -96,6 +104,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepMaxHospitalCapacity = baseMaxHospitalCapacity;
         keepMaxSickSociety = baseMaxSickSociety;
         keepMaxPossibleSchoolClose = baseMaxPossibleSchoolClose;
+
+        keepMaxAmbulanceCapacity = baseMaxAmbulanceCapacity;
 
         keepGameRating = 0;
         //keepMaxNumStudentsInSchools = baseMaxNumStudentsInSchools;
@@ -113,6 +123,9 @@ public class KeepDataBetweenLevels : MonoBehaviour
         PlayerPrefs.SetInt("maxHospitalCapacity", keepMaxHospitalCapacity);
         PlayerPrefs.SetInt("maxSickSociety", keepMaxSickSociety);
         PlayerPrefs.SetInt("maxPossibleSchoolClose", keepMaxPossibleSchoolClose);
+
+
+        PlayerPrefs.SetInt("maxAmbulanceCapacity", keepMaxAmbulanceCapacity);
 
 
         if (PlayerPrefs.GetInt("highScoreLevel") < keepCurrentLevel)
@@ -139,6 +152,9 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepMaxSickSociety = PlayerPrefs.GetInt("maxSickSociety");
 
         keepMaxPossibleSchoolClose = PlayerPrefs.GetInt("maxPossibleSchoolClose");
+
+        keepMaxAmbulanceCapacity = PlayerPrefs.GetInt("maxAmbulanceCapacity");
+
         //keepMaxNumStudentsInSchools = PlayerPrefs.GetInt("maxNumStudentsInSchools");
     }
 

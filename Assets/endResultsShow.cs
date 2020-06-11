@@ -152,7 +152,7 @@ public class endResultsShow : MonoBehaviour
         //globalScoreKeeper.current.maxSickSociety += 5;
         //globalScoreKeeper.current.maxNumStudentsInSchools += 5;
 
-        if (KeepDataBetweenLevels.keepGameRating == 0 && KeepDataBetweenLevels.keepCurrentLevel>0)
+        if (KeepDataBetweenLevels.keepGameRating == 0 && KeepDataBetweenLevels.keepCurrentLevel>2)
         {
             rateScreen.SetActive(true);
             gameObject.SetActive(false);

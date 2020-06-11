@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 47957366}
   - component: {fileID: 47957368}
   - component: {fileID: 47957367}
+  - component: {fileID: 47957369}
   m_Layer: 5
   m_Name: tokenImage
   m_TagString: Untagged
@@ -595,6 +596,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47957365}
   m_CullTransparentMesh: 0
+--- !u!95 &47957369
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47957365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295e57282784e40449ee47dd3593906b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &49958379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1613,7 @@ GameObject:
   - component: {fileID: 125742257}
   - component: {fileID: 125742259}
   - component: {fileID: 125742258}
+  - component: {fileID: 125742260}
   m_Layer: 5
   m_Name: tokenImage
   m_TagString: Untagged
@@ -1655,6 +1676,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125742256}
   m_CullTransparentMesh: 0
+--- !u!95 &125742260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125742256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295e57282784e40449ee47dd3593906b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &134423137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,9 +2123,9 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
-    ctime1: 45875
-    ctime2: 65535
-    ctime3: 0
+    ctime1: 39321
+    ctime2: 52428
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -2099,7 +2139,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   arrayOfSprites:
   - {fileID: 21300000, guid: e024cb58ad7a85d498622c418423c727, type: 3}
@@ -4901,6 +4941,7 @@ GameObject:
   - component: {fileID: 452391342}
   - component: {fileID: 452391344}
   - component: {fileID: 452391343}
+  - component: {fileID: 452391345}
   m_Layer: 5
   m_Name: tokenImage
   m_TagString: Untagged
@@ -4963,6 +5004,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452391341}
   m_CullTransparentMesh: 0
+--- !u!95 &452391345
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452391341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295e57282784e40449ee47dd3593906b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &461788280
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,14 +6874,14 @@ MonoBehaviour:
     key0: {r: 0.06808474, g: 0.8490566, b: 0.22667998, a: 1}
     key1: {r: 0.9433962, g: 0.9197063, b: 0.048949808, a: 1}
     key2: {r: 0.9339623, g: 0.17181383, b: 0.17181383, a: 0}
-    key3: {r: 1, g: 1, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
-    ctime1: 45875
-    ctime2: 65535
+    ctime1: 39321
+    ctime2: 52428
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -6836,7 +6896,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
 --- !u!114 &611179203
 MonoBehaviour:
@@ -8235,6 +8295,7 @@ GameObject:
   - component: {fileID: 725055230}
   - component: {fileID: 725055232}
   - component: {fileID: 725055231}
+  - component: {fileID: 725055233}
   m_Layer: 5
   m_Name: tokenImage
   m_TagString: Untagged
@@ -8297,6 +8358,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725055229}
   m_CullTransparentMesh: 0
+--- !u!95 &725055233
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725055229}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295e57282784e40449ee47dd3593906b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &741783496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,9 +8639,9 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
-    ctime1: 45875
-    ctime2: 65535
-    ctime3: 0
+    ctime1: 39321
+    ctime2: 52428
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -8575,7 +8655,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   arrayOfSprites:
   - {fileID: 21300000, guid: e024cb58ad7a85d498622c418423c727, type: 3}
@@ -11085,6 +11165,7 @@ MonoBehaviour:
   maxDays: 40
   hourPassed: 0
   timerHour: 0
+  levelTime: 0
 --- !u!114 &943990202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12229,9 +12310,9 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
-    ctime1: 45875
-    ctime2: 65535
-    ctime3: 0
+    ctime1: 39321
+    ctime2: 52428
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -12245,7 +12326,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   arrayOfSprites:
   - {fileID: 21300000, guid: e024cb58ad7a85d498622c418423c727, type: 3}
@@ -19330,6 +19411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1675991206}
   - component: {fileID: 1675991205}
+  - component: {fileID: 1675991207}
   m_Layer: 0
   m_Name: InfoManager
   m_TagString: Untagged
@@ -19344,7 +19426,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675991204}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fed6ea030a965145a6f396dc3819e91, type: 3}
   m_Name: 
@@ -19363,6 +19445,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675991207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675991204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1078f1deae6a359409ae656fa46acea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  builtInCredentials: {fileID: 4900000, guid: b4b56ebcef879514e92f7881bc27da07, type: 3}
+  statusMessage: {fileID: 0}
+  errorColor: {r: 1, g: 0, b: 0, a: 0}
+  onLogsUploaded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1687279266
 GameObject:
   m_ObjectHideFlags: 0
@@ -22047,9 +22147,9 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
-    ctime1: 45875
-    ctime2: 65535
-    ctime3: 0
+    ctime1: 39321
+    ctime2: 52428
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -22063,7 +22163,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   arrayOfSprites:
   - {fileID: 21300000, guid: e024cb58ad7a85d498622c418423c727, type: 3}

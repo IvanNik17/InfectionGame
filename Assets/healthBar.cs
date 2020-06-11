@@ -11,6 +11,8 @@ public class healthBar : MonoBehaviour
 
     float maxValue;
 
+
+
     //public Sprite[] arrayOfSprites; // 0 - good, 1 - medium, 2- bad
 
     
