@@ -9,7 +9,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     //40 , 0.5 ,0.5 , 1, 0.5 , 30, 40, 20
 
-    public static int keepMaxDays = 5; // 20
+    public static int keepMaxDays = 25; // 20
     public static float keepSpawnTime = 0.7f;
     public static float keepSlideTime = 0.7f;
 
@@ -36,6 +36,8 @@ public class KeepDataBetweenLevels : MonoBehaviour
     public static int baseMaxAmbulanceCapacity;
 
     public static int keepGameRating = 0;
+
+    public static bool playTutorial;
 
     //public static string keepDeviceID = "";
     public static string keepPlaySessionID = " ";
@@ -70,6 +72,11 @@ public class KeepDataBetweenLevels : MonoBehaviour
         }
         
 
+    }
+
+    public static int checkForTutorial()
+    {
+        return PlayerPrefs.GetInt("playedTutorial");
     }
 
 

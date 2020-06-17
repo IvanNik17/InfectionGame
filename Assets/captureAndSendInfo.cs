@@ -126,8 +126,8 @@ public class captureAndSendInfo : MonoBehaviour
 
     void sendToServer()
     {
-        this.GetComponent<ConnectToMySQL>().AddToUploadQueue(logs);
-        this.GetComponent<ConnectToMySQL>().UploadNow();
+        //this.GetComponent<ConnectToMySQL>().AddToUploadQueue(logs);
+        //this.GetComponent<ConnectToMySQL>().UploadNow();
     }
 
 

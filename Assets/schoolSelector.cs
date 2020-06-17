@@ -27,20 +27,23 @@ public class schoolSelector : MonoBehaviour
     void OnMouseDown()
     {
 
+        if (gameEndInitializer.current.whatEnd == -1)
+        {
+            isSelected = !isSelected;
+
+            if (isSelected)
+            {
+                GetComponent<AudioSource>().clip = open;
+                GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                GetComponent<AudioSource>().clip = close;
+                GetComponent<AudioSource>().Play();
+            }
+            GlobalEvents.current.toggleClasses(whichClass, isSelected);
+        }
+
         
-
-        isSelected = !isSelected;
-
-        if (isSelected)
-        {
-            GetComponent<AudioSource>().clip = open;
-            GetComponent<AudioSource>().Play();
-        }
-        else
-        {
-            GetComponent<AudioSource>().clip = close;
-            GetComponent<AudioSource>().Play();
-        }
-        GlobalEvents.current.toggleClasses(whichClass, isSelected);
     }
 }

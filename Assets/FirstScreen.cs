@@ -27,6 +27,8 @@ public class FirstScreen : MonoBehaviour
 
     public GameObject highScoreObj;
 
+    public GameObject tutorialToggle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,9 +59,19 @@ public class FirstScreen : MonoBehaviour
         {
             highScoreObj.SetActive(false);
         }
-        
 
 
+        if (KeepDataBetweenLevels.checkForTutorial() == 0)
+        {
+            tutorialToggle.GetComponent<Toggle>().interactable = false;
+            tutorialToggle.GetComponent<Toggle>().isOn = true;
+        }
+        else
+        {
+            tutorialToggle.GetComponent<Toggle>().interactable = true;
+        }
+
+        KeepDataBetweenLevels.playTutorial = tutorialToggle.GetComponent<Toggle>().isOn;
 
     }
 
@@ -67,6 +79,15 @@ public class FirstScreen : MonoBehaviour
     void Update()
     {
         startScreenAudio.volume = volumeLevel;
+        
+        
+    }
+
+
+    public void doTutorial(bool toggleTut)
+    {
+        KeepDataBetweenLevels.playTutorial = toggleTut;
+
     }
 
 

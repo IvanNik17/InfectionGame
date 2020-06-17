@@ -12,6 +12,8 @@ public class ambulanceTrigger : MonoBehaviour
 
     public GameObject fullBubble;
 
+    public GameObject layspaceObj;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,15 +42,19 @@ public class ambulanceTrigger : MonoBehaviour
                 {
                     bubble.GetComponent<Animator>().SetTrigger("showBubble");
                 }
+
                 
 
+                //other.transform.position = transform.position;
+                other.transform.position = layspaceObj.transform.position + new Vector3(Random.Range(-layspaceObj.transform.lossyScale.x / 2, layspaceObj.transform.lossyScale.x / 2), 0, 0);
+                other.GetComponent<Animator>().enabled = false;
+                other.transform.rotation = Quaternion.Euler(-180f, Random.Range(0f, 180f), 0f);
 
-                other.transform.position = transform.position;
                 other.transform.GetComponent<SphereCollider>().enabled = false;
                 other.transform.GetComponent<Rigidbody>().isKinematic = true;
                 other.transform.parent = transform;
 
-                other.transform.GetComponent<SkinnedMeshRenderer>().enabled = false;
+                //other.transform.GetComponent<SkinnedMeshRenderer>().enabled = false;
 
                 
             }
