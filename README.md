@@ -8,7 +8,7 @@ The game is still in development.
 
 ![Gameplay Gif](GameImages/infectionDefenderGameV4.gif)
 
-## Try Game
+## Try the Game
 The game can be played directly on the [itch.io page ](https://ivanniko.itch.io/infection-defender-beta3h)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
