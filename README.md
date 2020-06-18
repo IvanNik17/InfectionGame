@@ -6,7 +6,7 @@ The game is made for use in classrooms with the help of a teacher, as a reflecti
 
 The game is still in development.
 
-[Gameplay Gif](InfectionGame/GameImages/infectionDefenderGameV4.gif)
+![Gameplay Gif](InfectionGame/GameImages/infectionDefenderGameV4.gif)
 
 ## Try Game
 The game can be played directly on the [itch.io page ](https://ivanniko.itch.io/infection-defender-beta3h)
@@ -44,11 +44,11 @@ The project  is divided into two main scenes:
 
  - Start Screen Scene
 
-[Start Menu Image](InfectionGame/GameImages/GameImage_startScreen.PNG)
+![Start Menu Image](InfectionGame/GameImages/GameImage_startScreen.PNG)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
  - Main Game Scene
-[Start Menu Image](InfectionGame/GameImages/GameImage_gameScreen.PNG)
+![Start Menu Image](InfectionGame/GameImages/GameImage_gameScreen.PNG)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
 Code Structure:
