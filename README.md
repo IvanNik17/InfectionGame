@@ -14,8 +14,8 @@ The game can be played directly on the [itch.io page ](https://ivanniko.itch.io/
 
 ## Getting Started
 The repo contains the core Unity code for the Infection Defender game, with all used fonts, audio and model assets. For the appropriate licenses look at the License part of the readme. To get started, follow the instructions below:
-1.  [Make sure you have all Requirements](# Requirements)
-2.  [Download Source Code](# Installing)
+1.  [Make sure you have all Requirements](#-requirements)
+2.  [Download Source Code](#-installing)
 3.  Run the project in Unity and Enjoy!
 
 
