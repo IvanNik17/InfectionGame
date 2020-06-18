@@ -6,7 +6,7 @@ The game is made for use in classrooms with the help of a teacher, as a reflecti
 
 The game is still in development.
 
-![Gameplay Gif](InfectionGame/GameImages/infectionDefenderGameV4.gif)
+![Gameplay Gif](GameImages/infectionDefenderGameV4.gif)
 
 ## Try Game
 The game can be played directly on the [itch.io page ](https://ivanniko.itch.io/infection-defender-beta3h)
@@ -14,8 +14,8 @@ The game can be played directly on the [itch.io page ](https://ivanniko.itch.io/
 
 ## Getting Started
 The repo contains the core Unity code for the Infection Defender game, with all used fonts, audio and model assets. For the appropriate licenses look at the License part of the readme. To get started, follow the instructions below:
-1.  [Make sure you have all Requirements](link here)
-2.  [Download Source Code](link here)
+1.  [Make sure you have all Requirements](## Requirements)
+2.  [Download Source Code](## Installing)
 3.  Run the project in Unity and Enjoy!
 
 
@@ -44,10 +44,11 @@ The project  is divided into two main scenes:
 
  - Start Screen Scene
 
-![Start Menu Image](InfectionGame/GameImages/GameImage_startScreen.PNG)
+![Start Menu Image](GameImages/GameImage_startScreen.PNG)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
  - Main Game Scene
+ 
 ![Start Menu Image](GameImages/GameImage_gameScreen.PNG)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
@@ -86,11 +87,19 @@ Code Structure:
 ## Screenshots
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
-<!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
+![Screenshot1 Image](GameImages/gameImage_gameScreen2 166.png)
 
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
+![Screenshot2 Image](GameImages/gameImage_gameScreen3 348.png)
+
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
+
+![Screenshot2 Image](GameImages/GameImage_end.PNG)
+
+<!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
+
+![Screenshot2 Image](GameImages/GameImage_graph.PNG)
 
 
 ## Authors
