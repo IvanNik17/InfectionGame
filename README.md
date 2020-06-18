@@ -48,7 +48,7 @@ The project  is divided into two main scenes:
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
  - Main Game Scene
-![Start Menu Image](InfectionGame/GameImages/GameImage_gameScreen.PNG)
+![Start Menu Image](GameImages/GameImage_gameScreen.PNG)
 <!-- [Image Start Screen](docs/CONTRIBUTING.md)-->
 
 Code Structure:
