@@ -58,11 +58,11 @@ public class tutorialScript : MonoBehaviour
     {
         if (whichTutorial == 5)
         {
-            buttonNext.GetComponentInChildren<Text>().text = "End Tutorial";
+            buttonNext.GetComponentInChildren<Text>().text = "Afslut Tutorial";
         }
         else
         {
-            buttonNext.GetComponentInChildren<Text>().text = "Next";
+            buttonNext.GetComponentInChildren<Text>().text = "Næste";
         }
 
         

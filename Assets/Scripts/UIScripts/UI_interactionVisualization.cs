@@ -68,7 +68,7 @@ public class UI_interactionVisualization : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        daysVisualizer.transform.GetComponent<Text>().text ="Day " + globalTimer.current.daysPassed.ToString() + " / " + globalTimer.current.maxDays.ToString() + "\n" + globalTimer.current.hourPassed.ToString() + ":00";
+        daysVisualizer.transform.GetComponent<Text>().text = "Dag " + globalTimer.current.daysPassed.ToString() + " / " + globalTimer.current.maxDays.ToString() + "\n" + globalTimer.current.hourPassed.ToString() + ":00";
 
         hospitalCapacityVisualizer.GetComponent<healthBar>().setCurrValue((float)globalScoreKeeper.current.numberSickHospital);
 

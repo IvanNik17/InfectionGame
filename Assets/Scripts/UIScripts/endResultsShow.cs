@@ -68,24 +68,24 @@ public class endResultsShow : MonoBehaviour
             string endText = "";
             if (checkEnding == 0)
             {
-                endText = "You managed to survive the epidemic!";
+                endText = "Du formåede at overleve epidemien!";
                 endClip = goodBadAudio[0];
                 
             }
             else if (checkEnding == 1)
             {
 
-                endText = "The hospital capacity was exceeded!";
+                endText = "Hospitalet kapacitet blev overskredet!";
             }
             else if (checkEnding == 2)
             {
 
-                endText = "Too many sick people in society!";
+                endText = "For mange syge mennesker!";
             }
             else if (checkEnding == 3)
             {
 
-                endText = "Children got depressed, because classes were closed for too long!";
+                endText = "Folk blev deprimerede!";
             }
             endTextFieldHeadline.GetComponent<Text>().text = endText;
 
@@ -97,17 +97,17 @@ public class endResultsShow : MonoBehaviour
                 endSource.Play();
                 isPlayed = true;
             }
+
             
+            textHospitalized.GetComponent<Text>().text = "Der var <b>" + globalScoreKeeper.current.countHospitalized.ToString() + " </b> mennesker indlagt";
 
-            textHospitalized.GetComponent<Text>().text = "There were <b>" + globalScoreKeeper.current.countHospitalized.ToString() + " </b> people hospitalized";
-
-            textMissed.GetComponent<Text>().text = "You missed <b>" + globalScoreKeeper.current.numberSickSociety.ToString() + " </b> infected people";
+            textMissed.GetComponent<Text>().text = "Du gik glip af <b>" + globalScoreKeeper.current.numberSickSociety.ToString() + " </b> inficerede mennesker";
 
             bool didSchoolsClose = false;
             for (int i = 0; i < globalScoreKeeper.current.daysEachSchoolClosed.Length; i++)
             {
 
-                schoolsSubText[i].GetComponent<Text>().text = "<b>" + globalScoreKeeper.current.daysEachSchoolClosed[i].ToString() + "</b>\n" + "days";
+                schoolsSubText[i].GetComponent<Text>().text = "<b>" + globalScoreKeeper.current.daysEachSchoolClosed[i].ToString() + "</b>\n" + "dage";
                 if (globalScoreKeeper.current.daysEachSchoolClosed[i]>0)
                 {
                     didSchoolsClose = true;

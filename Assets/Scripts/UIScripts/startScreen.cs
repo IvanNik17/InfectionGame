@@ -19,8 +19,8 @@ public class startScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        headlineText.GetComponent<Text>().text = "Level " + KeepDataBetweenLevels.keepCurrentLevel;
-        underText.GetComponent<Text>().text = "Protect society from the infection for " + KeepDataBetweenLevels.keepMaxDays + " days.";
+        headlineText.GetComponent<Text>().text = "Niveau " + KeepDataBetweenLevels.keepCurrentLevel;
+        underText.GetComponent<Text>().text = "Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
     }
 
 

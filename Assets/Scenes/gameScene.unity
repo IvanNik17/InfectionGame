@@ -2428,7 +2428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: They can make their classmates and friends sick, spreading the infection
+  m_Text: "De kan g\xF8re andre syge ved at sprede infektionen"
 --- !u!222 &171861239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2678,7 +2678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Previous
+  m_Text: Tidligere
 --- !u!222 &247926176
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3683,7 +3683,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your choices
+  m_Text: Dine Valg
 --- !u!222 &313006916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4013,10 +4013,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Kids go from their homes to school
-
-    Sometimes they might be sick,
-    without knowing it'
+  m_Text: "N\xE5r mennesker g\xE5r ud, kan de undertiden v\xE6re syge uden at vide
+    det"
 --- !u!222 &330914672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4940,7 +4938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next
+  m_Text: "N\xE6ste"
 --- !u!222 &395832860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5799,7 +5797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Find the balance between:'
+  m_Text: 'Find balancen mellem:'
 --- !u!222 &496918016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5864,9 +5862,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 23
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -5876,7 +5874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume
+  m_Text: Genoptag
 --- !u!222 &499203211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5953,7 +5951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rate the game
+  m_Text: "Bed\xF8m Spillet"
 --- !u!222 &501928453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7380,7 +7378,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: See More
+  m_Text: Se Mere
 --- !u!222 &613380186
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10177,7 +10175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How much did you like the experience?
+  m_Text: Hvor meget kunne du lide oplevelsen?
 --- !u!222 &822073459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10998,7 +10996,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Or you can decide to close schools and limit contact between kids
+  m_Text: "Eller du kan v\xE6lge at lukke aktiviteter og begr\xE6nse kontakten mellem
+    mennesker"
 --- !u!222 &866678020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11278,9 +11277,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 23
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -11290,7 +11289,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Afslut
 --- !u!222 &890712030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12780,7 +12779,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
-    m_FontSize: 23
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -12791,7 +12790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next Level
+  m_Text: "N\xE6ste Niveau"
 --- !u!222 &979901255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14831,7 +14830,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: Tilbage
 --- !u!222 &1158988855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15108,7 +15107,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save & Exit
+  m_Text: Afslut
 --- !u!222 &1177130806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16008,9 +16007,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 23
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -16020,7 +16019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Genstart
 --- !u!222 &1256308418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19365,7 +19364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Infection spread
+  m_Text: Infektionsspredning
 --- !u!222 &1552574892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20775,7 +20774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Kids happiness
+  m_Text: Mennesker lykke
 --- !u!222 &1703610976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22648,7 +22647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Genstart
 --- !u!222 &1831849405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22798,7 +22797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Hospital space
+  m_Text: Hospitalets kapacitet
 --- !u!222 &1843794624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23469,8 +23468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You can slow down the infection by hospitalizing sick kids, by catching
-    them
+  m_Text: "Du kan bremse infektionen spredt af indl\xE6ggelse af mennesker"
 --- !u!222 &1892451653
 CanvasRenderer:
   m_ObjectHideFlags: 0

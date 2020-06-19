@@ -843,8 +843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186.00002, y: -147}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -166.95, y: -129.3}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152437493
 MonoBehaviour:
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 26
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -1238,7 +1238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
+  m_Text: 'Afslut
 
 '
 --- !u!222 &173398290
@@ -1359,8 +1359,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186.00002, y: 25}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -166.95, y: 42.69999}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175529916
 MonoBehaviour:
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 26
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -2839,9 +2839,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -2851,7 +2851,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close
+  m_Text: Tilbage
 --- !u!222 &446100546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3066,8 +3066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -377.3, y: -33.000008}
-  m_SizeDelta: {x: 145.6, y: 81.4}
+  m_AnchoredPosition: {x: -371.4, y: -32}
+  m_SizeDelta: {x: 192.71, y: 81.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &515566793
 Animator:
@@ -3527,8 +3527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.99992, y: 83}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -165.88, y: 100.7}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605213531
 MonoBehaviour:
@@ -3753,7 +3753,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 26
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -3763,7 +3763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: Kreditter
 --- !u!222 &695687822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Be careful !
+  m_Text: "V\xE6r forsigtig!"
 --- !u!222 &810283221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4244,8 +4244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252.04802, y: 20.649988}
-  m_SizeDelta: {x: 96.5, y: 96.5}
+  m_AnchoredPosition: {x: -257.5, y: 15.35}
+  m_SizeDelta: {x: 85.59, y: 85.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881033329
 MonoBehaviour:
@@ -4265,7 +4265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 654bf279abba77e459a1b6219d5ad491, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c55c8ad8642ec0741b436b842d7fe3be, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4840,9 +4840,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -4852,7 +4852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close
+  m_Text: Tilbage
 --- !u!222 &943968806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4929,7 +4929,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Catch the infected people and send them to the hospital
+  m_Text: Fang de inficerede mennesker og send dem til hospitalet
 --- !u!222 &959477763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5573,9 +5573,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -5585,7 +5585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close
+  m_Text: Tilbage
 --- !u!222 &1059671315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5745,7 +5745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Move the ambulance with mouse or touch
+  m_Text: "Flyt sengen med musen eller ber\xF8ringen"
 --- !u!222 &1073497320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6287,8 +6287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: 140}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -166.95, y: 157.69998}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196343786
 MonoBehaviour:
@@ -6726,8 +6726,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
-    m_FontSize: 26
-    m_FontStyle: 1
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -6737,7 +6737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Settings
+  m_Text: Indstillinger
 --- !u!222 &1264949951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7263,7 +7263,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
     m_FontSize: 26
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -7493,8 +7493,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8efa6e2904f4f5840bf62318f9f6c498, type: 3}
-    m_FontSize: 26
-    m_FontStyle: 1
+    m_FontSize: 20
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -7504,7 +7504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How To Play
+  m_Text: Instruktioner
 --- !u!222 &1454952637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7744,8 +7744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185.99991, y: -32}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -166.95, y: -14.300011}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528284572
 MonoBehaviour:
@@ -7917,9 +7917,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Highscore:
-
-    Level 10'
+  m_Text: "H\xF8jeste score:\nLevel 10"
 --- !u!222 &1601358663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7996,7 +7994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Close classes, to slow down the infection by clicking on the school buildings
+  m_Text: "Luk bygninger for at bremse infektionen ved at klikke p\xE5 dem"
 --- !u!222 &1606610237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8524,7 +8522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55d1ca989fa2d724da3da85270447e61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97a658dae49aac8449b2af3ac9039731, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8578,8 +8576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185.99991, y: -88}
-  m_SizeDelta: {x: 178.9, y: 50.6}
+  m_AnchoredPosition: {x: -166.95, y: -70.30001}
+  m_SizeDelta: {x: 190.81, y: 50.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724203541
 MonoBehaviour:
@@ -10058,7 +10056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.6, y: 140}
+  m_AnchoredPosition: {x: -299.4, y: 157.69998}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992989369
