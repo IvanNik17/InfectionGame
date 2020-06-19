@@ -37,7 +37,7 @@ There are a number of ways to get started with the Unity project:
 ```
 git clone https://github.com/IvanNik17/InfectionGame.git
 ```
- - Download the newest release:[LINK](https://github.com/IvanNik17/InfectionGame/tree/v2020.06.20)
+ - Download the newest release: [LINK](https://github.com/IvanNik17/InfectionGame/releases)
 
 ## Project Overview
 The project  is divided into two main scenes:
