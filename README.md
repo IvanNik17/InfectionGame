@@ -104,8 +104,8 @@ Code Structure:
 
 ## Authors
 
- -   **Ivan Nikolov**  -  _Main Development_  -  [University PhD Profile](https://vbn.aau.dk/en/persons/136267)
- -  **Bastian Ilso**  -  _3D Art assets_  -  [University Profile](https://vbn.aau.dk/en/persons/137891)
+ -   **Ivan Nikolov**  -  _Main Development and 2D art assets_  -  [University PhD Profile](https://vbn.aau.dk/en/persons/136267)
+ -  **Bastian Ilso**  -  _3D art assets_  -  [University Profile](https://vbn.aau.dk/en/persons/137891)
  - Additional input and ideas:
 	 - **Claus Madsen**
 	 - **Thomas Moeslund**
