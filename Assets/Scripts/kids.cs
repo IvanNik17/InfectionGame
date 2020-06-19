@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script for each kid object, it keeps track of the condition of the object - sick or healthy, as well as the current place of the object.
+/// The script also implements a IEnumerator method for the movement coroutine of object movement from the catcher to the hospital. The coroutine is started in the hopistalUpload script.
+/// </summary>
+
 public class kids : MonoBehaviour
 {
 

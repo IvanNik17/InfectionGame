@@ -2,39 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Code for spawning and dropping kids objects each level.
+/// Methods present in the class:
+/// - spawnKidNow() - called when spawnKids event is called, chooses a spawner at random and spawns a kid object with a weighted chance to be sick or healthy. Depending on that a different prefab is chosen
+/// - sickHealthyChance() - weighted random chance to spawn sick or healthy
+/// - slideKidNow() - called when slideKids event is called, chooses a spawner with spawned kids inside at random and slides a object from it to fall down and be caught.
+/// </summary>
+
 public class spawnKids : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject kidPrefab;
+#pragma warning disable 0649
+    [SerializeField]
+    private GameObject kidPrefab;
 
+    [SerializeField]
+    private GameObject kidPrefabSick;
 
-    public GameObject kidPrefabSick;
-
-    //public GameObject kidSpawner;
-    //public GameObject kidSlider;
-
-    public GameObject[] allSpawners;
+    [SerializeField]
+    private GameObject[] allSpawners;
+#pragma warning restore 0649
 
     int whichSpawnerSpawn = 0;
     int whichSpawnerSlide = 0;
 
-    //public List<GameObject> allKidObjects;
-
-    //public int maxNumKids = 100;
-
-    //public int kidCounter = 0;
-
-   
-
-    //int slideCounter = 0;
     
     void Start()
     {
 
-        //allSpawners = GameObject.FindGameObjectsWithTag("spawners");
 
-        //allKidObjects = new List<GameObject>();
 
         GlobalEvents.current.onSpawnKids += spawnKidNow;
 
@@ -64,7 +62,6 @@ public class spawnKids : MonoBehaviour
 
     void spawnKidNow()
     {
-        //Vector3 randomOffset = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
 
         List<GameObject> openSpawners = new List<GameObject>();
 
@@ -95,9 +92,6 @@ public class spawnKids : MonoBehaviour
 
         int currCondition = sickHealthyChance();
 
-        
-
-        //allSpawners[whichSpawnerSpawn].GetComponent<spawner>().currNumStudents++;
 
         GameObject currKid = null;
 
@@ -116,15 +110,11 @@ public class spawnKids : MonoBehaviour
                 {
                     currKid = Instantiate(kidPrefabSick, childTrans.position + randomOffset, Quaternion.Euler(-90 + Random.Range(-50f, 50f), 0 + Random.Range(-50f, 50f), -180 + Random.Range(-50f, 50f)));
                 }
-                
-                //allSpawners[whichSpawnerSpawn].GetComponent<spawner>().kidsInThisClass.Add(currKid);
 
-                //allSpawners[whichSpawnerSpawn].GetComponent<spawner>().placeOfKids.Add(0);
 
                 currKid.GetComponent<kids>().condition = currCondition;
 
                 currKid.GetComponent<kids>().currentPlace = 0;
-               // currKid.GetComponent<kids>().changeMaterial(currCondition);
             }
         }
         

@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The script keeps track if any of the level end conditions are reached. If they are the variable whatEnd is changed and the event levelEndingEvent are called.
+/// Possible game endings:
+/// - the last day of the level is reached - level is won - whatEnd == 0
+/// - the number of sick in the hospital exceeds maximum capacity - level is lost - whatEnd == 1
+/// - the number of sick in society exceeds the maximum possible - level is lost - whatEnd == 2
+/// - the depression in any closed school exceeds the maximum possible - level is lost - whatEnd == 3
+/// </summary>
+
 public class gameEndInitializer : MonoBehaviour
 {
 

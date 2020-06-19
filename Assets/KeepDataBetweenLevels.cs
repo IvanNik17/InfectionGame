@@ -4,6 +4,21 @@ using UnityEngine;
 using System;
 using System.Text;
 
+/// <summary>
+/// Class of static variables and access to PlayerPref for saving data between levels and between game starts.
+/// The static variables have a current and a base copy - the base copy is used for when a new game is started and current values need to be cleared to initial states
+/// The base values are set at level 1
+/// Methods implemented in the class:
+/// - checkForTutorial() - check if the user has went through the tutorial on this machine/this IP
+/// - nextLevel() - updates the level variables when a new level is reached. Currently the update is with hardcoded values, clamped to minimum and maximum possible values
+/// - resetStaticVals() - resets the static variables to the their base values when a new game is started
+/// - saveData() - saves data to where the user has gotten, so the level can be continued next time the game is started
+/// - loadData() - loads data if the load button is clicked in the start screen in the start scene
+/// - CreateMD5() - creates a MD5 hash for the saved data
+/// - generateUniqueID() - generates a random ID from current date, current game time, a random number, etc.
+/// </summary>
+
+
 public class KeepDataBetweenLevels : MonoBehaviour
 {
 
@@ -39,13 +54,13 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     public static bool playTutorial;
 
-    //public static string keepDeviceID = "";
+    
     public static string keepPlaySessionID = " ";
 
 
     private void Awake()
     {
-        //keepMaxPossibleSchoolClose = Mathf.RoundToInt(keepMaxDays / 2f);
+        
 
         if (keepCurrentLevel == 1)
         {
@@ -82,7 +97,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
     public static void nextLevel()
     {
-        //keepMaxDays += 5;
+        
         keepSpawnTime = Mathf.Clamp(keepSpawnTime- 0.1f,0.2f, 99999);
         keepSlideTime = Mathf.Clamp(keepSlideTime - 0.1f, 0.2f, 99999);
 
@@ -97,7 +112,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
 
         Debug.Log("spawnTime " + keepSpawnTime + " HealthyToSick " + keepPercentHealthyToSick + " HospitalCapacity " + keepMaxHospitalCapacity + " SickSociety " + keepMaxSickSociety);
-        //keepMaxNumStudentsInSchools += 5;
+        
     }
 
     public static void resetStaticVals()
@@ -115,7 +130,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
         keepMaxAmbulanceCapacity = baseMaxAmbulanceCapacity;
 
         keepGameRating = 0;
-        //keepMaxNumStudentsInSchools = baseMaxNumStudentsInSchools;
+        
     }
 
     public static void saveData()
@@ -142,7 +157,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
         
 
         
-        //PlayerPrefs.SetInt("maxNumStudentsInSchools", keepMaxNumStudentsInSchools);
+        
     }
 
 
@@ -162,7 +177,7 @@ public class KeepDataBetweenLevels : MonoBehaviour
 
         keepMaxAmbulanceCapacity = PlayerPrefs.GetInt("maxAmbulanceCapacity");
 
-        //keepMaxNumStudentsInSchools = PlayerPrefs.GetInt("maxNumStudentsInSchools");
+       
     }
 
 

@@ -9,25 +9,43 @@ using UnityEngine.Analytics;
 public class FirstScreen : MonoBehaviour
 {
 
-    public GameObject howToObj;
-    public GameObject settingsObj;
-    public GameObject creditsObj;
+#pragma warning disable 0649
 
-    public GameObject volumeTxt;
 
-    public GameObject volumeSlider;
+    [SerializeField]
+    private GameObject howToObj;
 
-    public AudioSource startScreenAudio;
+    [SerializeField]
+    private GameObject settingsObj;
 
-    public GameObject loadButton;
+    [SerializeField]
+    private GameObject creditsObj;
 
-    int currMenu; //0 - main, 1 - how to, 2 - settings, 3 - credits;
+    [SerializeField]
+    private GameObject volumeTxt;
 
-    public static float volumeLevel = 0.7f;
+    [SerializeField]
+    private GameObject volumeSlider;
 
-    public GameObject highScoreObj;
+    [SerializeField]
+    private AudioSource startScreenAudio;
 
-    public GameObject tutorialToggle;
+    [SerializeField]
+    private GameObject loadButton;
+
+    [SerializeField]
+    private GameObject highScoreObj;
+
+    [SerializeField]
+    private GameObject tutorialToggle;
+
+#pragma warning restore 0649
+
+
+
+    int currMenu; //0 - main, 1 - how to, 2 - settings, 3 - credits; // current menu items
+
+    private static float volumeLevel = 0.7f;
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +132,8 @@ public class FirstScreen : MonoBehaviour
         KeepDataBetweenLevels.keepPlaySessionID = PlayerPrefs.GetString("currPlaySessionID");
 
         KeepDataBetweenLevels.loadData();
+
+        
 
         SceneManager.LoadScene(nextSceneIndex);
     }

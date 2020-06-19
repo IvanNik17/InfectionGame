@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script connected to the pause screen menu - it implements methods for the different buttons present at the screen.
+/// - resumeGame - unpauses timers and goes back to the game
+/// - restartFromPause - restarts current level and calls the restart event
+/// - quitGame - quits to the start screen scene
+/// - pauseGame - pauses timers and shows the pause menu
+/// </summary>
+
 public class pauseScreen : MonoBehaviour
 {
 

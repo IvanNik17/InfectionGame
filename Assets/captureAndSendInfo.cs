@@ -3,6 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
+/// <summary>
+/// Class that keeps track of a number of anonymised performance statistics for the game. These statistics are saved when each of the global events is called.
+/// All the statistics are saved to the dictionary in string format, so they can be saved to disc or sent to a database.
+/// The script can be connected to the custom ConnectToMySQL script to send the data to a database
+/// The statistics are as follows:
+/// - GameVersion - version of the game
+/// - PlayID - a MD5 encripted string on numbers and letters that changes each time a new game is initialized 
+/// - DeviceID - a MD5 encripted string on numbers and letters that is set the first time the game is played on a new machine or through a new IP
+/// - email - dummy entry as emails are not set currently
+/// - timestamp - system dateTime entry
+/// - eventType - the type of event that called the script
+/// - GameTime - a level timer in milliseconds
+/// - GameState - the state of the game when the event was called - playing, starting, ending, paused, etc.
+/// - CurrentLevel - the current level the user is playing
+/// - MaxNumInfectedInSociety - the maximum possible infected in society for the current level the user is playing
+/// - MaxNumHospitalized - the maximum hospital beds for the currentl level the user is playing
+/// - DaysClosed1_3, DaysClosed4_6, DaysClosed7_9, DaysClosed10_12 - all days each of the schools was closed for the current level played
+/// - CurrentDay - the current play day for the level - from 1 to 25
+/// - CurrentInfectedInSociety - the current number of infected in society for the current day
+/// - CurrentHospitalized - the current number of hospitalized for the current day
+/// - CurrentDepression1_3, CurrentDepression4_6, CurrentDepression7_9, CurrentDepression10_12 - the current level of depression of each of the schools for the current day
+/// - BackendSpawnTime - the spawn time used for the current level
+/// - BackendHealthyToSick - the percentage of healthy to sick for the current level
+/// - GameRating - a rating from 1 to 5, that users can give the game after the 3rd level
+/// </summary>
 
 
 public class captureAndSendInfo : MonoBehaviour

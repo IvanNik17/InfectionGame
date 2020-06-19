@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script for collecting data and drawing the graphs for the captured values. Six graphs are drawn - for sick people in society, hospitalized people and one graph for the mental health of each of the schools
+/// The data is taken from GlobalScoreKeeper class.
+/// Methods implemented in the class:
+/// - makeAxes - captures how big the drawing space for the graph is
+/// - setupPoints - creates a list of object points that will be used to draw the graph. A point is created for each day in the level
+/// - CreateDotConnection - creates lines between the dots for a connected graph visualization
+/// - GetAngleFromVectorFloat - calculates the angle between each two dots so the lines can be oriented correctly
+/// - putTextOnGraph - draws labels on the top of the graph
+/// - putImageNextToGraph - puts the specific image to the left of the graph and moves it's position depending on where the last point's X and Y position on the graph are
+/// - makeLine_horizontal - draw a horizontal line from beginning of X axis to the end
+/// - makeLine_vertical - draw a vertical line from bottom of Y axis to the top of it
+/// - moveTime - move time vertical axis depending on the slider bar
+/// - ShowGraph - draws the graph points and graph lines depending on the values given as input in a list. The values are normalized to fit inside the graph space
+/// - endGraphShow - combines all the above functions to draw the full graph, depending on whichGraph value one of the six graphs is drawn
+/// </summary>
+
+
 public class drawGraph : MonoBehaviour
 {
 
@@ -92,60 +110,6 @@ public class drawGraph : MonoBehaviour
                 break;
         }
     }
-
-    void Start()
-    {
-        //graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
-
-
-        //vertLinePoint = new GameObject("dotConnection", typeof(Image));
-        //vertLinePoint.transform.SetParent(graphContainer, false);
-
-
-
-        //switch (whichGraph)
-        //{
-        //    case 0:
-        //        pointsInfected = setupPoints(globalTimer.current.maxDays, Color.red);
-        //        graphMaxYvalue = globalScoreKeeper.current.maxSickSociety;
-        //        break;
-        //    case 1:
-        //        pointsHospitalized = setupPoints(globalTimer.current.maxDays, Color.blue);
-        //        graphMaxYvalue = globalScoreKeeper.current.maxHospitalCapacity;
-        //        break;
-        //    case 2:
-        //        pointsUnhappy_1_3 = setupPoints(15, Color.cyan);
-        //        break;
-        //    case 3:
-        //        pointsUnhappy_4_6 = setupPoints(15, Color.green);
-        //        break;
-        //    case 4:
-        //        pointsUnhappy_7_9 = setupPoints(15, Color.magenta);
-        //        break;
-        //    case 5:
-        //        pointsUnhappy_10_12 = setupPoints(15, Color.grey);
-        //        break;
-        //    default:
-        //        break;
-        //}
-
-        
-
-    }
-
-    //void chooseMaxXvalue()
-    //{
-    //    switch (whichGraph)
-    //    {
-    //        case 0:
-    //            graphMaxXvalue = 
-    //            break;
-
-    //        default:
-    //            break;
-    //    }
-
-    //}
 
 
 
@@ -271,11 +235,7 @@ public class drawGraph : MonoBehaviour
 
     private void CreateDotConnection(GameObject currObj, Vector2 dotPositionA, Vector2 dotPositionB)
     { // ,Color currColor
-      //GameObject gameObject = new GameObject("dotConnection", typeof(Image));
 
-        //RectTransform graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
-        //gameObject.transform.SetParent(graphContainer, false);
-        //gameObject.GetComponent<Image>().color = currColor;
 
         RectTransform rectTransform = currObj.GetComponent<RectTransform>();
         Vector2 dir = (dotPositionB - dotPositionA).normalized;
@@ -304,14 +264,8 @@ public class drawGraph : MonoBehaviour
     public void putTextOnGraph(string textMsg)
     {
 
-        //float graphHeight = graphContainer.sizeDelta.y;
-
-        //float graphWidth = graphContainer.sizeDelta.x;
-
         RectTransform textTransform = graphText.GetComponent<RectTransform>();
 
-        //textPos.x = (textPos.x / yMaximum) * graphWidth;
-        //textPos.y = (textPos.y / yMaximum) * graphHeight;
 
         textTransform.anchoredPosition = horizLinePoint.GetComponent<RectTransform>().anchoredPosition;
 
@@ -334,7 +288,6 @@ public class drawGraph : MonoBehaviour
 
         float yPosition = (yPos / yMaximum) * graphHeight;
 
-        //graphImage.transform.position = new Vector3(xPosition,0, yPosition);
 
         imageTransform.anchorMin = new Vector2(0, 0);
         imageTransform.anchorMax = new Vector2(0, 0);
@@ -356,8 +309,6 @@ public class drawGraph : MonoBehaviour
 
         GameObject gameObject = linePoint;
 
-
-        //gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().color = currColor;
 
         CreateDotConnection(gameObject, new Vector2(0, (lineMarkerHeight / yMaximum) * graphHeight), new Vector2(graphWidth, (lineMarkerHeight / yMaximum) * graphHeight));
@@ -370,8 +321,6 @@ public class drawGraph : MonoBehaviour
 
         float graphWidth = graphContainer.sizeDelta.x;
 
-
-        //GameObject gameObject = new GameObject("dotConnection", typeof(Image));
 
         GameObject gameObject = linePoint;
 

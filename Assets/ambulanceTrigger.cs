@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Trigger script that initializes when a kid object touches the catcher object moved by the user.
+/// It counts up how many objects there are in the catcher, changes the properties of the "cought" objects and triggers the catch animations
+/// </summary>
+
 public class ambulanceTrigger : MonoBehaviour
 {
 
@@ -20,18 +25,8 @@ public class ambulanceTrigger : MonoBehaviour
         if (other.tag == "kids" && (healthyInAmbulance +sickInAmbulance)<globalScoreKeeper.current.maxAmbulanceCapacity )
         {
 
-            
-            
-            //if (other.GetComponent<kids>().condition == 0)
-            //{
-            //    //globalScoreKeeper.current.numberHealthyHospital++;
-
-            //    healthyInAmbulance++;
-
-            //}
             if (other.GetComponent<kids>().condition == 1)
             {
-                //globalScoreKeeper.current.numberSickHospital++;
 
                 this.GetComponent<AudioSource>().Play();
 
@@ -45,7 +40,7 @@ public class ambulanceTrigger : MonoBehaviour
 
                 
 
-                //other.transform.position = transform.position;
+                
                 other.transform.position = layspaceObj.transform.position + new Vector3(Random.Range(-layspaceObj.transform.lossyScale.x / 2, layspaceObj.transform.lossyScale.x / 2), 0, 0);
                 other.GetComponent<Animator>().enabled = false;
                 other.transform.rotation = Quaternion.Euler(-180f, Random.Range(0f, 180f), 0f);
@@ -54,7 +49,7 @@ public class ambulanceTrigger : MonoBehaviour
                 other.transform.GetComponent<Rigidbody>().isKinematic = true;
                 other.transform.parent = transform;
 
-                //other.transform.GetComponent<SkinnedMeshRenderer>().enabled = false;
+               
 
                 
             }

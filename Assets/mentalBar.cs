@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Mental bar script that sets the max and current values of the mental health/happiness for each school bar.
+/// These are set in the UI_interaction Visualization script
+/// In addition it changes the face and plays animations when the values get closer to maximum.
+/// </summary>
+
 public class mentalBar : MonoBehaviour
 {
 
@@ -16,17 +22,6 @@ public class mentalBar : MonoBehaviour
 
     public Image mentalImage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void setMaxValueMental(float setMaxValue)
     {

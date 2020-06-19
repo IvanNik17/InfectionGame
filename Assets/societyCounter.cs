@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Trigger script for when sick objects reach the society. The script counts how many infected have been missed and visualizes the number of missed infected, as a percentage by coloring houses in red
+/// The current infected in society and maximum possible are used to calculate a normalized value and divide it by the number of visual houses.
+/// The script also shows appropriate animations when a sick object is missed.
+/// </summary>
+
 public class societyCounter : MonoBehaviour
 {
 
@@ -74,8 +80,6 @@ public class societyCounter : MonoBehaviour
                     infectShowCounter++;
                     for (int i = 0; i < housesInSociety.Count; i++)
                     {
-                        //bool findSuscept = false;
-                        //bool findSick = false;
 
                         if (!houseInfected[i])
                         {
@@ -99,27 +103,6 @@ public class societyCounter : MonoBehaviour
                             break;
                         }
 
-                        //foreach (Transform subHouse in housesInSociety[i].transform)
-                        //{
-                        //    if (subHouse.name== "HomeSusceptible" && subHouse.gameObject.activeSelf)
-                        //    {
-                        //        subHouse.gameObject.SetActive(false);
-                        //        findSuscept = true;
-                        //    }
-
-                        //    if (findSuscept && subHouse.name == "HomeInfected")
-                        //    {
-                        //        subHouse.gameObject.SetActive(true);
-                        //        findSick = true;
-                        //    }
-
-
-                        //}
-
-                        //if (findSuscept && findSick)
-                        //{
-                        //    break;
-                        //}
                     }
                 }
 

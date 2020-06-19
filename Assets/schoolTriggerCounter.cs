@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Trigger script that counts up and changes object properties every time a kid object touches the school prefab
+/// </summary>
+
 public class schoolTriggerCounter : MonoBehaviour
 {
 

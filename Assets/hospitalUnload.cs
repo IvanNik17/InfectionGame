@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Trigger script for uploading kid objects from the catcher to the hospital. The trigger counts all the new sick in the hospital, it plays the appropriate animations and calls the movement scripts in the kids objects to move them
+/// The script also contains the method for removing infected from the hospital each day
+/// </summary>
+
 public class hospitalUnload : MonoBehaviour
 {
 
@@ -26,10 +31,6 @@ public class hospitalUnload : MonoBehaviour
                 bubbleFull.GetComponent<Animator>().ResetTrigger("isFull");
                 
             }
-
-            
-            
-
 
 
             //Debug.Log("HERE");

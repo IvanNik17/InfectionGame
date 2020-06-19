@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Health bar script that sets the max value of the bar and in game time changes the bar color and fill depending on the values
+/// Uses a gradient of a color to change the color to closer to full it gets.
+/// These are set in the UI_interaction Visualization script
+/// </summary>
+
 public class healthBar : MonoBehaviour
 {
 
@@ -11,24 +17,9 @@ public class healthBar : MonoBehaviour
 
     float maxValue;
 
-
-
     //public Sprite[] arrayOfSprites; // 0 - good, 1 - medium, 2- bad
 
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //mentalImageObj = this.transform.Find("tokenImage").gameObject;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void setMaxValue(float setMaxValue)
     {
@@ -42,20 +33,6 @@ public class healthBar : MonoBehaviour
 
         barfill.color = gradient.Evaluate(currValue / maxValue);
 
-        
-
-        //if ( (currValue / maxValue) <= 0.20)
-        //{
-        //    mentalHealthImage.GetComponent<Image>().sprite = arrayOfSprites[0];
-        //}
-        //else if ((currValue / maxValue) > 0.20 && (currValue / maxValue) <= 0.70)
-        //{
-        //    mentalHealthImage.GetComponent<Image>().sprite = arrayOfSprites[1];
-        //}
-        //else if ((currValue / maxValue) > 0.70)
-        //{
-        //    mentalHealthImage.GetComponent<Image>().sprite = arrayOfSprites[2];
-        //}
 
     }
 }

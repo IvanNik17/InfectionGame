@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Helper class for changing the UI text boxes for the graph screen. The script is called when the graph event is called, as well as when the slider is changed
+/// </summary>
+
 public class changeTextForGraphs : MonoBehaviour
 {
 
@@ -45,15 +49,4 @@ public class changeTextForGraphs : MonoBehaviour
         textHappiness.GetComponent<Text>().text = "Depression level for different grades at day <b>" + dateToShow + "</b>";
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

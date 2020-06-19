@@ -4,38 +4,50 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class for visualizing the end screen and controlling data visualized on it.
+/// It implements a number of methods:
+/// - Restart - used by the restart button to restart current level
+/// - NextLevel - used by the next level button - it reload the scene and updates the start values in KeepDataBetweenLevels
+/// - showStatistics - used to call the statistics screen and load all necessary data for it
+/// - saveExit - used by the exit and save button - loads the start screen scene and saves the level data, so a user can load the same level again
+/// </summary>
+
 public class endResultsShow : MonoBehaviour
 {
+#pragma warning disable 0649
+    [SerializeField]
+    private GameObject endScreen;
+    [SerializeField]
+    private GameObject endTextFieldHeadline;
+    [SerializeField]
+    private GameObject rateScreen;
+    [SerializeField]
+    private GameObject buttonRestart;
+    [SerializeField]
+    private GameObject buttonNext;
+    [SerializeField]
+    private GameObject textHospitalized;
+    [SerializeField]
+    private GameObject textMissed;
+    [SerializeField]
+    private GameObject textSchoolHeadline;
+    [SerializeField]
+    private GameObject[] schoolsSubText;
+    [SerializeField]
+    private GameObject graphScreen;
+    [SerializeField]
+    private GameObject timeSlider;
+    [SerializeField]
+    private AudioSource mainSource;
+    [SerializeField]
+    private AudioSource endSource;
+    [SerializeField]
+    private AudioClip[] goodBadAudio;
+#pragma warning restore 0649
 
-    public GameObject endScreen;
-    public GameObject endTextFieldHeadline;
+    private bool isPlayed = false;
 
-    public GameObject rateScreen;
-
-    public GameObject buttonRestart;
-    public GameObject buttonNext;
-
-    public GameObject textHospitalized;
-    public GameObject textMissed;
-    public GameObject textSchoolHeadline;
-    public GameObject[] schoolsSubText;
-
-    public GameObject graphScreen;
-    public GameObject timeSlider;
-
-    public AudioSource mainSource;
-    public AudioSource endSource;
-
-    public AudioClip[] goodBadAudio;
-
-    bool isPlayed = false;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -43,12 +55,9 @@ public class endResultsShow : MonoBehaviour
         int checkEnding = gameEndInitializer.current.whatEnd;
 
 
-
-        
-
         if (checkEnding >= 0 )
         {
-            //mainSource.Stop();
+            
 
             mainSource.volume = 0.01f;
 
@@ -142,15 +151,7 @@ public class endResultsShow : MonoBehaviour
 
     public void NextLevel()
     {
-        //globalTimer.current.maxDays += 20;
-        //globalTimer.current.spawnTime -= 0.2f;
-        //globalTimer.current.slideTime -= 0.2f;
 
-        //globalScoreKeeper.current.currentLevel += 1;
-        //globalScoreKeeper.current.percentHealthyToSick += 0.05f;
-        //globalScoreKeeper.current.maxHospitalCapacity += 5;
-        //globalScoreKeeper.current.maxSickSociety += 5;
-        //globalScoreKeeper.current.maxNumStudentsInSchools += 5;
 
         if (KeepDataBetweenLevels.keepGameRating == 0 && KeepDataBetweenLevels.keepCurrentLevel>2)
         {

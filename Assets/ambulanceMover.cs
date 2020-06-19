@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script for moving the catcher object with the mouse. It captures the mouse's position in screen space and transforms it to world space
+/// </summary>
+
 public class ambulanceMover : MonoBehaviour
 {
     private Vector3 mOffset;

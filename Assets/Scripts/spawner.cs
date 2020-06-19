@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script connect to each of the spawner objects. Keeps track of which class it is, current number of students, maximum number of students, days it has been closed and is it currently open or closed
+/// Methods implemented:
+/// - countClosedDays - is called on each day end and counts how many days the school has been closed
+/// - changeSchoolAppearance - called when the school is clicked to change its appearance
+/// - changeClass - called when the school is clicked to change if it is open or closed
+/// </summary>
+
 public class spawner : MonoBehaviour
 {
 
@@ -21,16 +29,13 @@ public class spawner : MonoBehaviour
 
     public GameObject schoolObj;
 
-    //public List<int> placeOfKids; // 0 - spawner, 1 - falling, 2- cough, 3-ground
-
     // Start is called before the first frame update
     void Start()
     {
 
         maxDaysClosed = globalScoreKeeper.current.maxDaysSchoolClosed;
 
-        //maxNumStudents = globalScoreKeeper.current.maxNumStudentsInSchools;
-        //maxDaysClosed = globalScoreKeeper.current.maxDaysSchoolClosed;
+
 
         kidsInThisClass = new List<GameObject>();
 
@@ -40,23 +45,9 @@ public class spawner : MonoBehaviour
 
         GlobalEvents.current.onDayPassed += countClosedDays;
 
-        
-        //foreach (Transform childTrans in transform)
-        //{
-        //    Debug.Log(childTrans.name);
-        //    if (childTrans.name == "schoolRot")
-        //    {
-        //        schoolObj = childTrans.gameObject;
-        //    }
-        //}
-        //Debug.Log("-------------");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
 
     void countClosedDays()

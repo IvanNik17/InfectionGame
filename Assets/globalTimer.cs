@@ -2,29 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Global code for keeping track of game time and timers for game ending, spawners and sliders. Calls events when timers hit specific values.
+/// Uses FixedUpdate, so timers are independent of the framerate.
+/// </summary>
+
 public class globalTimer : MonoBehaviour
 {
 
     public static globalTimer current;
 
-    public float timerSpawn = 0f;
-    public float timerSlide = 0f;
-
-    public float spawnTime = 3f;
-
-
-    public float slideTime = 3f;
-
     public int daysPassed = 0;
-    public float timerDay = 0f;
-    public float dayPassTime = 10f;
-
-    public int maxDays = 40;
-
+    public int maxDays = 25;
     public int hourPassed = 0;
-    public float timerHour = 0;
-
     public float levelTime = 0;
+
+    private float timerSpawn = 0f;
+    private float timerSlide = 0f;
+    private float spawnTime = 0.5f;
+    private float slideTime = 0.5f;
+    private float timerDay = 0f;
+    private float dayPassTime = 2f;
+    private float timerHour = 0;
+
+
 
 
     private void Awake()
