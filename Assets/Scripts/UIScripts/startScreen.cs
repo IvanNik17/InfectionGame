@@ -20,7 +20,16 @@ public class startScreen : MonoBehaviour
     void Start()
     {
         headlineText.GetComponent<Text>().text = "Niveau " + KeepDataBetweenLevels.keepCurrentLevel;
-        underText.GetComponent<Text>().text = "Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
+
+        if (KeepDataBetweenLevels.keepCurrentLevel > 1)
+        {
+            underText.GetComponent<Text>().text = "Sygdommen blev stærkere. Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
+        }
+        else
+        {
+            underText.GetComponent<Text>().text = "Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
+        }
+        
     }
 
 

@@ -74,13 +74,13 @@ public class drawGraph : MonoBehaviour
                 pointsInfected = setupPoints(globalTimer.current.maxDays, Color.red);
                 graphMaxYvalue = globalScoreKeeper.current.maxSickSociety + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxSickSociety, Color.gray);
-                putTextOnGraph("Maximum sick in society");
+                putTextOnGraph("Maksimum inficerede mennesker");
                 break;
             case 1:
                 pointsHospitalized = setupPoints(globalTimer.current.maxDays, Color.blue);
                 graphMaxYvalue = globalScoreKeeper.current.maxHospitalCapacity + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxHospitalCapacity, Color.gray);
-                putTextOnGraph("Hospital capacity");
+                putTextOnGraph("Hospitalets kapacitet");
                 break;
             case 2:
                 pointsUnhappy_1_3 = setupPoints(globalTimer.current.maxDays, new Color(1f,0.42f,0f));

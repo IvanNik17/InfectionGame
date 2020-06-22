@@ -85,7 +85,7 @@ public class endResultsShow : MonoBehaviour
             else if (checkEnding == 3)
             {
 
-                endText = "Folk blev deprimerede!";
+                endText = "Menneske blev deprimerede!";
             }
             endTextFieldHeadline.GetComponent<Text>().text = endText;
 
@@ -116,12 +116,12 @@ public class endResultsShow : MonoBehaviour
 
             if (didSchoolsClose)
             {
-                textSchoolHeadline.GetComponent<Text>().text = "You needed to close some grades:";
+                textSchoolHeadline.GetComponent<Text>().text = "Du var nødt til at sætte nogle begrænsninger:";
                 
             }
             else
             {
-                textSchoolHeadline.GetComponent<Text>().text = "You did not close any grades";
+                textSchoolHeadline.GetComponent<Text>().text = "Det lykkedes dig ikke at sætte nogen begrænsninger";
             }
 
 

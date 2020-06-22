@@ -42,11 +42,11 @@ public class changeTextForGraphs : MonoBehaviour
     
     void changeText()
     {
-        textInfected.GetComponent<Text>().text = "På dag <b>" + dateToShow + "</b> \n var der <b>" + globalScoreKeeper.current.infectedEachDay[Mathf.Clamp(dateToShow - 1,0,99999)] + "</b> inficerede";
+        textInfected.GetComponent<Text>().text = "På dag <b>" + dateToShow + "</b> \n der var <b>" + globalScoreKeeper.current.infectedEachDay[Mathf.Clamp(dateToShow - 1,0,99999)] + "</b> inficerede";
 
-        textHospitalized.GetComponent<Text>().text = "På dag <b>" + dateToShow + "</b> \n var der <b>" + globalScoreKeeper.current.inHospitalEachDay[Mathf.Clamp(dateToShow - 1, 0, 99999)] + "</b> indlagt";
+        textHospitalized.GetComponent<Text>().text = "På dag <b>" + dateToShow + "</b> \n der var <b>" + globalScoreKeeper.current.inHospitalEachDay[Mathf.Clamp(dateToShow - 1, 0, 99999)] + "</b> indlagt";
 
-        textHappiness.GetComponent<Text>().text = "Hvor deprimeret var mennesker på dag <b>" + dateToShow + "</b>";
+        textHappiness.GetComponent<Text>().text = "Hvor glade var mennesker på dag <b>" + dateToShow + "</b>";
     }
 
 }

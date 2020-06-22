@@ -69,13 +69,16 @@ public class spawner : MonoBehaviour
 
     void changeSchoolAppearance(int thisClass, bool openClose)
     {
+
+       
         if (spawnerNumber == thisClass)
         {
+            
             foreach (Transform schoolChildren in schoolObj.transform)
             {
                 if (schoolChildren.name == "closed")
                 {
-                    
+                    Debug.Log(schoolChildren.gameObject.activeSelf);
                     schoolChildren.gameObject.SetActive(!openClose);
                 }
             }
