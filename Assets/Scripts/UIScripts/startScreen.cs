@@ -23,11 +23,11 @@ public class startScreen : MonoBehaviour
 
         if (KeepDataBetweenLevels.keepCurrentLevel > 1)
         {
-            underText.GetComponent<Text>().text = "Sygdommen blev stærkere. Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
+            underText.GetComponent<Text>().text = "Sygdommen blev stærkere. Beskyt befolkningen mod sygdom i " + KeepDataBetweenLevels.keepMaxDays + " dage.";
         }
         else
         {
-            underText.GetComponent<Text>().text = "Beskyt mennesker mod infektionen for " + KeepDataBetweenLevels.keepMaxDays + " dage.";
+            underText.GetComponent<Text>().text = "Beskyt befolkningen mod sygdom i " + KeepDataBetweenLevels.keepMaxDays + " dage.";
         }
         
     }

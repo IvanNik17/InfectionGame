@@ -104,7 +104,7 @@ public class globalScoreKeeper : MonoBehaviour
 
             List<float> currClassList = happinessClassesEachDay[i];
 
-            currClassList.Add(allSpawners[i].GetComponent<spawner>().daysClosed);
+            currClassList.Add(maxDaysSchoolClosed - allSpawners[i].GetComponent<spawner>().daysClosed);
 
             happinessClassesEachDay[i] = currClassList;
         }

@@ -3763,7 +3763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Kreditter
+  m_Text: Lavet af
 --- !u!222 &695687822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4929,7 +4929,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Fang de inficerede mennesker og send dem til hospitalet
+  m_Text: Fang de syge og send dem til hospitalet
 --- !u!222 &959477763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5745,7 +5745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Flyt sengen med musen eller ber\xF8ringen"
+  m_Text: Flyt sengen med mus eller touch
 --- !u!222 &1073497320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7917,7 +7917,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "H\xF8jeste score:\nLevel 10"
+  m_Text: 'Highscore:
+
+    Level 10'
 --- !u!222 &1601358663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7994,7 +7996,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Luk bygninger for at bremse infektionen ved at klikke p\xE5 dem"
+  m_Text: "Klik p\xE5 stederne for at lukke dem"
 --- !u!222 &1606610237
 CanvasRenderer:
   m_ObjectHideFlags: 0

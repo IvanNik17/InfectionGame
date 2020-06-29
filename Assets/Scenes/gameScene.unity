@@ -2428,7 +2428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "De kan g\xF8re andre syge ved at sprede infektionen"
+  m_Text: "De kan g\xF8re andre syge ved at sprede sygdommen"
 --- !u!222 &171861239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3962,8 +3962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "N\xE5r mennesker g\xE5r ud, kan de undertiden v\xE6re syge uden at vide
-    det"
+  m_Text: "N\xE5r mennesker g\xE5r ud, kan de v\xE6re syge uden at vide det"
 --- !u!222 &330914672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10095,7 +10094,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hvor meget kunne du lide oplevelsen?
+  m_Text: Hvad syntes du om spillet?
 --- !u!222 &822073459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20498,7 +20497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Mennesker lykke
+  m_Text: Personers lykke
 --- !u!222 &1703610976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23402,7 +23401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Du kan bremse infektionen spredt af indl\xE6ggelse af mennesker"
+  m_Text: "Du kan bremse sygdommen ved at indl\xE6gge mennesker"
 --- !u!222 &1892451653
 CanvasRenderer:
   m_ObjectHideFlags: 0

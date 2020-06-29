@@ -71,7 +71,7 @@ public class FirstScreen : MonoBehaviour
         if (highScore != 0)
         {
             highScoreObj.SetActive(true);
-            highScoreObj.GetComponentInChildren<Text>().text = "Højeste Score:" + "\n" + "Niveau " + PlayerPrefs.GetInt("highScoreLevel").ToString();
+            highScoreObj.GetComponentInChildren<Text>().text = "Highscore:" + "\n" + "Niveau " + PlayerPrefs.GetInt("highScoreLevel").ToString();
         }
         else
         {

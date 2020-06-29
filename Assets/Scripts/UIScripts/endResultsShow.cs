@@ -68,14 +68,14 @@ public class endResultsShow : MonoBehaviour
             string endText = "";
             if (checkEnding == 0)
             {
-                endText = "Du formåede at overleve epidemien!";
+                endText = "Du overlevede epidemien!";
                 endClip = goodBadAudio[0];
                 
             }
             else if (checkEnding == 1)
             {
 
-                endText = "Hospitalet kapacitet blev overskredet!";
+                endText = "Hospitalet er fyldt!";
             }
             else if (checkEnding == 2)
             {
@@ -85,7 +85,7 @@ public class endResultsShow : MonoBehaviour
             else if (checkEnding == 3)
             {
 
-                endText = "Menneske blev deprimerede!";
+                endText = "Befolkningen blev ulykkelig!";
             }
             endTextFieldHeadline.GetComponent<Text>().text = endText;
 
@@ -99,9 +99,9 @@ public class endResultsShow : MonoBehaviour
             }
 
             
-            textHospitalized.GetComponent<Text>().text = "Der var <b>" + globalScoreKeeper.current.countHospitalized.ToString() + " </b> mennesker indlagt";
+            textHospitalized.GetComponent<Text>().text = "Du har indlagt <b>" + globalScoreKeeper.current.countHospitalized.ToString() + " </b> mennesker";
 
-            textMissed.GetComponent<Text>().text = "Du gik glip af <b>" + globalScoreKeeper.current.numberSickSociety.ToString() + " </b> inficerede mennesker";
+            textMissed.GetComponent<Text>().text = "Du gik glip af <b>" + globalScoreKeeper.current.numberSickSociety.ToString() + " </b> syge mennesker";
 
             bool didSchoolsClose = false;
             for (int i = 0; i < globalScoreKeeper.current.daysEachSchoolClosed.Length; i++)
@@ -116,12 +116,12 @@ public class endResultsShow : MonoBehaviour
 
             if (didSchoolsClose)
             {
-                textSchoolHeadline.GetComponent<Text>().text = "Du var nødt til at sætte nogle begrænsninger:";
+                textSchoolHeadline.GetComponent<Text>().text = "Du havde brug for at lukke :";
                 
             }
             else
             {
-                textSchoolHeadline.GetComponent<Text>().text = "Det lykkedes dig ikke at sætte nogen begrænsninger";
+                textSchoolHeadline.GetComponent<Text>().text = "Du lukkede ingen bygninger";
             }
 
 

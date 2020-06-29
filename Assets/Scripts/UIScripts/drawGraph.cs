@@ -74,7 +74,7 @@ public class drawGraph : MonoBehaviour
                 pointsInfected = setupPoints(globalTimer.current.maxDays, Color.red);
                 graphMaxYvalue = globalScoreKeeper.current.maxSickSociety + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxSickSociety, Color.gray);
-                putTextOnGraph("Maksimum inficerede mennesker");
+                putTextOnGraph("Maksimum antal syge");
                 break;
             case 1:
                 pointsHospitalized = setupPoints(globalTimer.current.maxDays, Color.blue);
@@ -86,25 +86,25 @@ public class drawGraph : MonoBehaviour
                 pointsUnhappy_1_3 = setupPoints(globalTimer.current.maxDays, new Color(1f,0.42f,0f));
                 graphMaxYvalue = globalScoreKeeper.current.maxDaysSchoolClosed + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxDaysSchoolClosed, Color.gray);
-                putTextOnGraph("Depression");
+                putTextOnGraph("Start Lykke");
                 break;
             case 3:
                 pointsUnhappy_4_6 = setupPoints(globalTimer.current.maxDays, new Color(1f, 0.42f, 0f));
                 graphMaxYvalue = globalScoreKeeper.current.maxDaysSchoolClosed + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxDaysSchoolClosed, Color.gray);
-                putTextOnGraph("Depression");
+                putTextOnGraph("Start Lykke");
                 break;
             case 4:
                 pointsUnhappy_7_9 = setupPoints(globalTimer.current.maxDays, new Color(1f, 0.42f, 0f));
                 graphMaxYvalue = globalScoreKeeper.current.maxDaysSchoolClosed + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxDaysSchoolClosed, Color.gray);
-                putTextOnGraph("Depression");
+                putTextOnGraph("Start Lykke");
                 break;
             case 5:
                 pointsUnhappy_10_12 = setupPoints(globalTimer.current.maxDays, new Color(1f, 0.42f, 0f));
                 graphMaxYvalue = globalScoreKeeper.current.maxDaysSchoolClosed + offset;
                 makeLine_horizontal(horizLinePoint, graphMaxYvalue, globalScoreKeeper.current.maxDaysSchoolClosed, Color.gray);
-                putTextOnGraph("Depression");
+                putTextOnGraph("Start Lykke");
                 break;
             default:
                 break;
@@ -221,7 +221,15 @@ public class drawGraph : MonoBehaviour
             }
             else
             {
-                CreateDotConnection(circleGameObject, Vector2.zero, currPos);
+                if (whichGraph>=2)
+                {
+                    CreateDotConnection(circleGameObject, new Vector2(0, (globalScoreKeeper.current.maxDaysSchoolClosed / yMaximum) * graphHeight), currPos);
+                }
+                else
+                {
+                    CreateDotConnection(circleGameObject, Vector2.zero, currPos);
+                }
+                
             }
             lastPos = currPos;
 
