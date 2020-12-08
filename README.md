@@ -4,8 +4,7 @@ A simple catcher style Unity WebGL educational game, made for explaining the gov
 
 The game is made for use in classrooms with the help of a teacher, as a reflective tool and contains a number visualization tools and graphs for providing feedback on the user's choices and their consequences. 
 
-The game is still in development. All the scripts are commented, with additional in Inspector comments. The code is quite messy and lacks a lot of refactoring and optimizations. In currently relies on variable reflection assigments and contains redundancies, which can be fixed with better exploiting of class inheritance. Global classes are set as singletons, but the code still lacks a lot of proper encapsulation.
-
+The game is still in development. All the scripts are commented, with additional in Inspector comments. The code is quite messy and lacks a lot of refactoring and optimizations. In currently relies on variable reflection assigments and may contain, which will be fixed with better exploiting of class inheritance.
 ![Gameplay Gif](GameImages/infectionDefenderGameV4.gif)
 
 ## Try the Game
